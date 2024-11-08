@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar Active Link Styling */
+.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight for active section */
+  border-radius: 8px;
+}
