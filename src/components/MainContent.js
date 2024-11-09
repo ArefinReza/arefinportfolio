@@ -4,6 +4,8 @@ import { Box, Typography } from '@mui/material';
 import coverImage from '../assets/image/coverImage.JPG'
 import '../assets/css/maincontent.css'
 import About from './About';
+import Skills from './Skills';
+import Resume from './Resume';
 const MainContent = () => {
   return (
     <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 20px 300px' }, bgcolor: 'background.default' }}>
@@ -43,12 +45,20 @@ const MainContent = () => {
           <About/>
         </Typography>
       </Box>
+
+      {/* Skills Sections  */}
+      <Box id="skills" sx={{ my: 4 }}>
+        {/* <Typography variant="h4" fontWeight="bold">About Me</Typography> */}
+        <Typography>
+          <Skills/>
+        </Typography>
+      </Box>
+
       {/* Resume Section */}
       <Box id="resume" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">Resume</Typography>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula enim in dui fringilla...
-        </p>
+        <Typography>
+          <Resume/>
+        </Typography>
       </Box>
 
       {/* Portfolio Section */}

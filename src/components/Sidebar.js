@@ -15,7 +15,7 @@ const Sidebar = () => {
     <Box
       sx={{
         width: { xs: '100vw', sm: '300px' },
-        bgcolor: 'primary.main',
+        bgcolor: '#016A70',
         color: 'white',
         display: 'flex',
         flexDirection: 'column',
@@ -66,6 +66,10 @@ const Sidebar = () => {
         <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
           <ListItemIcon><Person sx={{ color: 'white' }} /></ListItemIcon>
           <ListItemText primary="About" />
+        </ListItem>
+        <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon><Person sx={{ color: 'white' }} /></ListItemIcon>
+          <ListItemText primary="Skills" />
         </ListItem>
         <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
           <ListItemIcon><BusinessCenter sx={{ color: 'white' }} /></ListItemIcon>
