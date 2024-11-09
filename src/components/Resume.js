@@ -34,16 +34,47 @@ const experienceData = [
   },
 ];
 
+const certificationData = [
+  {
+    title: 'Python Basic',
+    company: 'Tech Solutions Inc.',
+    year: '2022 - Present',
+    description: 'Developed responsive user interfaces with React and Material-UI.',
+  },
+  {
+    title: 'Database Programming',
+    company: 'Web Innovators',
+    year: '2021 - 2022',
+    description: 'Assisted in the development of web applications using JavaScript and Node.js.',
+  },
+];
+
+const coursesData = [
+  {
+    title: 'Full Stack Web Development',
+    company: 'Web Innovators',
+    year: '2021 - 2022',
+    description: 'Assisted in the development of web applications using JavaScript and Node.js.',
+  },
+  {
+    title: 'Cybersecurity',
+    company: 'Tech Solutions Inc.',
+    year: '2022 - Present',
+    description: 'Developed responsive user interfaces with React and Material-UI.',
+  },
+];
+
 function Resume() {
   const [isInView, setIsInView] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const resumeRef = useRef(null);
 
-  // Intersection Observer to trigger animations when items come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries[0].isIntersecting && !hasAnimated) {
           setIsInView(true);
+          setHasAnimated(true); // Ensure animation only runs once
         }
       },
       { threshold: 0.1 }
@@ -54,7 +85,7 @@ function Resume() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <Box ref={resumeRef} className="resumeSection" sx={{ padding: '20px' }}>
@@ -99,6 +130,62 @@ function Resume() {
         <Divider sx={{ marginBottom: '20px' }} />
         <Grid container spacing={4}>
           {experienceData.map((item, index) => (
+            <Grid
+              item
+              xs={12}
+              md={6}
+              key={index}
+              className={`resumeItem ${isInView ? 'animate' : ''}`}
+            >
+              <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1 }}>
+                {item.title}
+              </Typography>
+              <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
+                {item.company} | {item.year}
+              </Typography>
+              <Typography variant="body2" sx={{ mt: 1 }}>
+                {item.description}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/* Certification Section */}
+      <Box className="resumeCategory" sx={{ marginTop: '40px' }}>
+        <Typography variant="h4" className="resumeTitle">
+          <WorkIcon sx={{ marginRight: '10px' }} /> Certification
+        </Typography>
+        <Divider sx={{ marginBottom: '20px' }} />
+        <Grid container spacing={4}>
+          {certificationData.map((item, index) => (
+            <Grid
+              item
+              xs={12}
+              md={6}
+              key={index}
+              className={`resumeItem ${isInView ? 'animate' : ''}`}
+            >
+              <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1 }}>
+                {item.title}
+              </Typography>
+              <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
+                {item.company} | {item.year}
+              </Typography>
+              <Typography variant="body2" sx={{ mt: 1 }}>
+                {item.description}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/* Courses Section */}
+      <Box className="resumeCategory" sx={{ marginTop: '40px' }}>
+        <Typography variant="h4" className="resumeTitle">
+          <WorkIcon sx={{ marginRight: '10px' }} /> Courses
+        </Typography>
+        <Divider sx={{ marginBottom: '20px' }} />
+        <Grid container spacing={4}>
+          {coursesData.map((item, index) => (
             <Grid
               item
               xs={12}
