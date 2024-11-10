@@ -6,35 +6,19 @@ import '../assets/css/maincontent.css'
 import About from './About';
 import Skills from './Skills';
 import Resume from './Resume';
+import Portfolio from './Portfolio';
+import Services from './Services';
+import Contact from './Contact';
+import Home from './Home';
+import Footer from './Footer';
 const MainContent = () => {
   return (
-    <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 20px 300px' }, bgcolor: 'background.default' }}>
-      <Box
-        id="home"
-        sx={{
-          height: '780px',
-          backgroundImage: `url(${coverImage})`,
-          backgroundSize: 'cover',
-          width:'100%',
-          overflow:'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          color: 'white',
-          textAlign: 'left',
-          padding: '0 20px',
-          mb: 4,
-        }}
-      >
-        <Typography className='covername' variant="h2" fontWeight="bold">Arefin Reza</Typography>
-        <Typography variant="h5">
-          <Typed
-            strings={["Web Developer", "Designer", "Freelancer"]}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
-          />
+    <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 0px 300px' }, bgcolor: 'background.default' }}>
+
+      {/* Home Section */}
+      <Box id="home">
+        <Typography>
+          <Home/>
         </Typography>
       </Box>
 
@@ -63,23 +47,31 @@ const MainContent = () => {
 
       {/* Portfolio Section */}
       <Box id="portfolio" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">Portfolio</Typography>
-        {/* Add your portfolio items here */}
+        <Typography variant="h4" fontWeight="bold">
+        <Portfolio/>
+        </Typography>
+        
       </Box>
 
       {/* Services Section */}
       <Box id="services" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">Services</Typography>
-        {/* Add your services here */}
+        <Typography variant="h4" fontWeight="bold">
+          <Services/>
+          </Typography>
+        
       </Box>
 
       {/* Contact Section */}
       <Box id="contact" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">Contact</Typography>
-        {/* Add your contact form or contact information here */}
+        <Typography variant="h4" fontWeight="bold">
+          <Contact/>
+        </Typography>
       </Box>
-
-      {/* Additional Sections... */}
+      <Box id="footer" >
+        <Typography variant="h4" fontWeight="bold">
+          <Footer/>
+        </Typography>
+      </Box>
     </Box>
   );
 };

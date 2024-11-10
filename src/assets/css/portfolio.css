@@ -1,0 +1,54 @@
+.portfolioSection {
+    padding: 20px;
+  }
+  
+  .filterOptions .filterItem {
+    font-weight: bold;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .filterOptions .filterItem.active,
+  .filterOptions .filterItem:hover {
+    background-color: #1976d2;
+    color: #fff;
+  }
+  
+  .portfolioItem {
+    position: relative;
+  }
+  
+  .portfolioImageWrapper {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .portfolioImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .portfolioHoverOverlay {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .portfolioImageWrapper:hover .portfolioHoverOverlay {
+    opacity: 1;
+  }
+  
+  .modalContent {
+    position: relative;
+    text-align: center;
+  }
+  
+  .modalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,14 @@
+.imageSlider img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 600px) {
+    .imageSlider img {
+      max-height: 250px;
+    }
+  }
+div{
+    margin-left: 500px;
+}
+  
