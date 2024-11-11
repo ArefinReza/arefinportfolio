@@ -10,7 +10,7 @@ const Sidebar = () => {
   const toggleDrawer = (isOpen) => () => {
     setOpen(isOpen);
   };
-
+  
   const sidebarContent = (
     <Box
       sx={{
@@ -58,36 +58,36 @@ const Sidebar = () => {
         <IconButton color="inherit"><GitHub /></IconButton>
       </Box>
 
-      <List>
-        <ListItem button component={Link} to="home" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><Home sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><Person sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><Person sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Skills" />
-        </ListItem>
-        <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><BusinessCenter sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Resume" />
-        </ListItem>
-        <ListItem button component={Link} to="portfolio" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><Folder sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Portfolio" />
-        </ListItem>
-        <ListItem button component={Link} to="services" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><Work sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Services" />
-        </ListItem>
-        <ListItem button component={Link} to="contact" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon><ContactMail sx={{ color: 'white' }} /></ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItem>
-      </List>
+      <List sx={{ width: '100%' }}>
+      <ListItem button component={Link} to="home" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><Home sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItem>
+      <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="About" />
+      </ListItem>
+      <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Skills" />
+      </ListItem>
+      <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><BusinessCenter sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Resume" />
+      </ListItem>
+      <ListItem button component={Link} to="portfolio" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><Folder sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Portfolio" />
+      </ListItem>
+      <ListItem button component={Link} to="services" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><Work sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Services" />
+      </ListItem>
+      <ListItem button component={Link} to="contact" spy smooth offset={-50} activeClass="active">
+        <ListItemIcon sx={{ justifyContent: 'center' }}><ContactMail sx={{ color: 'white' }} /></ListItemIcon>
+        <ListItemText primary="Contact" />
+      </ListItem>
+    </List>
     </Box>
   );
 
@@ -98,7 +98,7 @@ const Sidebar = () => {
         color="inherit"
         edge="start"
         onClick={toggleDrawer(true)}
-        sx={{ display: { xs: 'inline', sm: 'none' }, position: 'fixed', top: 10, left: 10 }}
+        sx={{ display: { xs: 'inline', sm: 'none' }, position: 'fixed', top: 10, right: 10 }}
       >
         <Menu />
       </IconButton>
@@ -110,11 +110,15 @@ const Sidebar = () => {
 
       {/* Drawer Sidebar for Mobile */}
       <Drawer
-        anchor="left"
+        anchor="right"
         open={open}
         onClose={toggleDrawer(false)}
         sx={{
           display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': {
+            width: '75vw', // Set the drawer width to 75% of viewport width
+            maxWidth: '300px', // Maximum width for larger screens
+          },
         }}
       >
         {sidebarContent}
