@@ -9,8 +9,11 @@ import {
   Box,
   Paper,
   useMediaQuery,
+  Breadcrumbs,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../assets/css/ServiceDetails.css';
 import Sidebar from './Sidebar';
 
@@ -40,17 +43,37 @@ const ServiceDetails = () => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row' }}>
-      {/* Sidebar */}
-      <Sidebar />
-
       {/* Main Content */}
       <Box
         sx={{
           flexGrow: 1,
           padding: 2,
-          marginLeft: isMobile ? 0 : '300px', // Apply left margin only on larger screens
+          marginLeft: isMobile ? 0 : '0px', // Apply left margin only on larger screens
+          margin: '20px',
         }}
       >
+        <Breadcrumbs
+          separator={<ArrowBackIosIcon fontSize="small" />}
+          aria-label="breadcrumb"
+          sx={{
+            '& .MuiBreadcrumbs-separator': { color: 'primary.main' },
+              display: 'flex',
+              justifyContent: 'flex-end',
+              mb: 2,
+          }}
+        >
+          <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <HomeIcon fontSize="small" sx={{ mr: 0.5 }} /> Home
+            </Box>
+          </Link>
+          <Link to="/services" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
+            Services
+          </Link>
+          <Typography color="text.primary">{selectedService.title}</Typography>
+        </Breadcrumbs>
+
+
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>

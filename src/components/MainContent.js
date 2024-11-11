@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactTyped as Typed } from 'react-typed';
 import { Box, Typography } from '@mui/material';
-import coverImage from '../assets/image/coverImage.JPG'
 import '../assets/css/maincontent.css'
 import About from './About';
 import Skills from './Skills';
