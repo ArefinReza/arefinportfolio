@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import ServiceDetails from './components/ServiceDetails';
+import PortfolioDetails from './components/PortfolioDetails';
 
 const App = () => {
   const location = useLocation(); // Get the current location
@@ -17,6 +18,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/services/:id" element={<ServiceDetails />} />
+          <Route path="/portfolio/:id" element={<PortfolioDetails />} />
+
         </Routes>
       </Box>
     </Box>

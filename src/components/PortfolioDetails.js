@@ -14,7 +14,40 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import '../assets/css/ServiceDetails.css';
 
-const ServiceDetails = () => {
+
+
+
+
+const portfolioData = [
+  {
+    id: '1',
+    title: 'Web Development',
+    category:'ECommerce',
+    description: 'I created many Ecommerce site using Laravel and React',
+     imageUrl: 'https://media.licdn.com/dms/image/D4D12AQHAzpZZDBIkfA/article-cover_image-shrink_720_1280/0/1710486640359?e=2147483647&v=beta&t=_kP7RyfolRjZCXpwZO3GJqC4Trnozc_G8gP1uCmzilc',
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
+  },
+  {
+    id: '2',
+    title: 'Software Development',
+    category:'Portfolio',
+    description: 'Detailed information about software development.',
+     imageUrl: 'https://media.licdn.com/dms/image/D4D12AQHAzpZZDBIkfA/article-cover_image-shrink_720_1280/0/1710486640359?e=2147483647&v=beta&t=_kP7RyfolRjZCXpwZO3GJqC4Trnozc_G8gP1uCmzilc',
+    categories: [
+      { name: 'Desktop', description: 'Desktop software development details.', images: ['https://via.placeholder.com/300x200'] },
+      { name: 'Mobile', description: 'Mobile software solutions.', images: ['https://via.placeholder.com/300x200'] },
+      { name: 'Web', description: 'Web applications development.', images: ['https://via.placeholder.com/300x200'] }
+    ]
+  },
+  // More services with similar structures
+];
+
+export {portfolioData};
+const PortfolioDetails = () => {
   const { id } = useParams();
   const [selectedService, setSelectedService] = useState(null);
   const [activeFilter, setActiveFilter] = useState(null); // Active category filter
@@ -22,32 +55,8 @@ const ServiceDetails = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const services = [
-    {
-      id: '1',
-      title: 'Web Development',
-      description: 'Web development services...',
-      categories: [
-        { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
-        { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
-        { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
-      ]
-    },
-    {
-      id: '2',
-      title: 'Software Development',
-      description: 'Detailed information about software development.',
-      categories: [
-        { name: 'Desktop', description: 'Desktop software development details.', images: ['https://via.placeholder.com/300x200'] },
-        { name: 'Mobile', description: 'Mobile software solutions.', images: ['https://via.placeholder.com/300x200'] },
-        { name: 'Web', description: 'Web applications development.', images: ['https://via.placeholder.com/300x200'] }
-      ]
-    },
-    // More services with similar structures
-  ];
-
   useEffect(() => {
-    const service = services.find((service) => service.id === id);
+    const service = portfolioData.find((service) => service.id === id);
     setSelectedService(service);
     if (service) {
       // Set the initial category to the first one
@@ -87,7 +96,7 @@ const ServiceDetails = () => {
             </Box>
           </Link>
           <Link style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
-            Services
+            Portfolio
           </Link>
           <Typography color="text.primary">{selectedService.title}</Typography>
         </Breadcrumbs>
@@ -183,4 +192,4 @@ const ServiceDetails = () => {
   );
 };
 
-export default ServiceDetails;
+export default PortfolioDetails;

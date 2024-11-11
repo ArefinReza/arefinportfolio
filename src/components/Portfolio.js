@@ -3,16 +3,8 @@ import { Box, Typography, Grid, IconButton, Modal, Fade } from '@mui/material';
 import { OpenInFull, Info } from '@mui/icons-material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import '../assets/css/portfolio.css'; // Ensure your CSS is updated as well
+import { portfolioData } from './PortfolioDetails';
 
-// Sample portfolio data
-const portfolioData = [
-  { id: 1, title: 'E-Commerce Site', category: 'ECommerce', description: 'An online shop with dynamic inventory management.', imageUrl: 'https://media.licdn.com/dms/image/D4D12AQHAzpZZDBIkfA/article-cover_image-shrink_720_1280/0/1710486640359?e=2147483647&v=beta&t=_kP7RyfolRjZCXpwZO3GJqC4Trnozc_G8gP1uCmzilc' },
-  { id: 2, title: 'Personal Portfolio', category: 'Portfolio', description: 'A creative showcase for personal projects.', imageUrl: 'portfolio1.jpg' },
-  { id: 3, title: 'Photo Design', category: 'Photo Design', description: 'Modern photo editing and retouching work.', imageUrl: 'photo1.jpg' },
-  // Add more items as needed
-];
-export {portfolioData};
-// Filter categories
 const categories = ['All', 'ECommerce', 'Portfolio', 'Apps', 'Photo Design', 'Templates'];
 
 function Portfolio() {
@@ -91,19 +83,19 @@ function Portfolio() {
                 '&:hover': { opacity: 1 }
               }}>
                 <IconButton onClick={() => openImageModal(item.imageUrl)} sx={{ color: '#fff', backgroundColor: '#1976d2', borderRadius: '50%' }}>
-                  <OpenInFull fontSize="large" />
+                  <OpenInFull fontSize="small" />
                 </IconButton>
                 <IconButton onClick={() => window.location.href = `/portfolio/${item.id}`} sx={{ color: '#fff', backgroundColor: '#1976d2', borderRadius: '50%' }}>
-                  <Info fontSize="large" />
+                  <Info fontSize="small" />
                 </IconButton>
               </Box>
             </Box>
-            <Typography variant="h6" sx={{ mt: 1, textAlign: 'center' }}>
+            {/* <Typography variant="h6" sx={{ mt: 1, textAlign: 'center' }}>
               {item.title}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
               {item.description}
-            </Typography>
+            </Typography> */}
           </Grid>
         ))}
       </Grid>
