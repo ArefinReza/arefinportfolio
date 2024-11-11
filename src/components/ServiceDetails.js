@@ -13,6 +13,7 @@ import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-mater
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import '../assets/css/ServiceDetails.css';
+import { services } from './Services';
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -22,32 +23,9 @@ const ServiceDetails = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const services = [
-    {
-      id: '1',
-      title: 'Web Development',
-      description: 'Web development services...',
-      categories: [
-        { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
-        { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
-        { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
-      ]
-    },
-    {
-      id: '2',
-      title: 'Software Development',
-      description: 'Detailed information about software development.',
-      categories: [
-        { name: 'Desktop', description: 'Desktop software development details.', images: ['https://via.placeholder.com/300x200'] },
-        { name: 'Mobile', description: 'Mobile software solutions.', images: ['https://via.placeholder.com/300x200'] },
-        { name: 'Web', description: 'Web applications development.', images: ['https://via.placeholder.com/300x200'] }
-      ]
-    },
-    // More services with similar structures
-  ];
-
   useEffect(() => {
-    const service = services.find((service) => service.id === id);
+    // Convert the id from params to a number to match the services data
+    const service = services.find((service) => service.id === Number(id));
     setSelectedService(service);
     if (service) {
       // Set the initial category to the first one
@@ -86,7 +64,7 @@ const ServiceDetails = () => {
               <HomeIcon fontSize="small" sx={{ mr: 0.5 }} /> Home
             </Box>
           </Link>
-          <Link style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
+          <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
             Services
           </Link>
           <Typography color="text.primary">{selectedService.title}</Typography>
@@ -98,9 +76,9 @@ const ServiceDetails = () => {
               marginBottom: 3,
               flexWrap: 'wrap',
             }}>
-        <Typography variant="h4" fontWeight="bold" gutterBottom>
-              {selectedService.title}
-            </Typography>
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            {selectedService.title}
+          </Typography>
         </Box>
         <Box
             className="filterOptions"
@@ -136,16 +114,12 @@ const ServiceDetails = () => {
           </Box>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            
             <Typography variant="body1" gutterBottom>
               {selectedService.description}
             </Typography>
           </Grid>
 
           {/* Category Filter */}
-          
-
-          {/* Filtered Output */}
           <Grid container spacing={2} mt={2}>
             <Grid item xs={12} md={5}>
               <Typography variant="h6" gutterBottom>

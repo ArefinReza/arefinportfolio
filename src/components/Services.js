@@ -13,39 +13,70 @@ const services = [
     id: 1,
     title: "Web Development",
     description: "Building responsive and scalable websites with modern technologies.",
-    icon: <CodeIcon />
+    icon: <CodeIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
   {
     id: 2,
     title: "UI/UX Design",
     description: "Creating user-friendly and visually appealing designs.",
-    icon: <DesignServicesIcon />
+    icon: <DesignServicesIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
   {
     id: 3,
     title: "Business Analysis",
     description: "Providing data-driven insights for better decision-making.",
-    icon: <AssessmentIcon />
+    icon: <AssessmentIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
   {
     id: 4,
     title: "SEO Optimization",
     description: "Improving search engine ranking and online visibility.",
-    icon: <QueryStatsIcon />
+    icon: <QueryStatsIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
   {
     id: 5,
     title: "Consulting",
     description: "Offering expert advice to enhance your business strategy.",
-    icon: <BusinessCenterIcon />
+    icon: <BusinessCenterIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
   {
     id: 6,
     title: "Custom Solutions",
     description: "Tailoring solutions to meet specific business needs.",
-    icon: <ExtensionIcon />
+    icon: <ExtensionIcon />,
+    categories: [
+      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+    ]
   },
 ];
+export{services}
 
 function Services() {
   const navigate = useNavigate();
