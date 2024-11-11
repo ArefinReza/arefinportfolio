@@ -3,9 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import {
   Grid,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
   Box,
   Paper,
   useMediaQuery,
@@ -14,52 +11,74 @@ import {
 import { useTheme } from '@mui/material/styles';
 import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Carousel from 'react-material-ui-carousel';
 import '../assets/css/ServiceDetails.css';
-import Sidebar from './Sidebar';
 
 const ServiceDetails = () => {
   const { id } = useParams();
   const [selectedService, setSelectedService] = useState(null);
+  const [activeFilter, setActiveFilter] = useState(null); // Active category filter
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Check if screen is small (mobile)
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const services = [
-    { id: '1', title: 'Web Design', description: 'Enim qui eos rerum in delectus Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.' },
-    { id: '2', title: 'Software Development', description: 'Detailed information about software development.' },
-    { id: '3', title: 'Product Management', description: 'Insights on product management.' },
-    { id: '4', title: 'Graphic Design', description: 'Details about graphic design services.' },
-    { id: '5', title: 'Marketing', description: 'All about marketing strategies.' }
+    {
+      id: '1',
+      title: 'Web Development',
+      description: 'Web development services...',
+      categories: [
+        { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+        { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+        { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+      ]
+    },
+    {
+      id: '2',
+      title: 'Software Development',
+      description: 'Detailed information about software development.',
+      categories: [
+        { name: 'Desktop', description: 'Desktop software development details.', images: ['https://via.placeholder.com/300x200'] },
+        { name: 'Mobile', description: 'Mobile software solutions.', images: ['https://via.placeholder.com/300x200'] },
+        { name: 'Web', description: 'Web applications development.', images: ['https://via.placeholder.com/300x200'] }
+      ]
+    },
+    // More services with similar structures
   ];
 
   useEffect(() => {
     const service = services.find((service) => service.id === id);
     setSelectedService(service);
+    if (service) {
+      // Set the initial category to the first one
+      setActiveFilter(service.categories[0]);
+    }
   }, [id]);
 
   if (!selectedService) {
-    return <div>Service not found.</div>;
+    return (
+      <div>
+        Service not found. <Link to="/services">Return to Services</Link>
+      </div>
+    );
   }
 
+  const handleFilter = (category) => {
+    setActiveFilter(category);
+  };
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row' }}>
+    <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', padding: 2 }}>
       {/* Main Content */}
-      <Box
-        sx={{
-          flexGrow: 1,
-          padding: 2,
-          marginLeft: isMobile ? 0 : '0px', // Apply left margin only on larger screens
-          margin: '20px',
-        }}
-      >
+      <Box sx={{ flexGrow: 1, margin: '20px' }}>
         <Breadcrumbs
           separator={<ArrowBackIosIcon fontSize="small" />}
           aria-label="breadcrumb"
           sx={{
             '& .MuiBreadcrumbs-separator': { color: 'primary.main' },
-              display: 'flex',
-              justifyContent: 'flex-end',
-              mb: 2,
+            display: 'flex',
+            justifyContent: 'flex-end',
+            mb: 2,
           }}
         >
           <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
@@ -72,65 +91,90 @@ const ServiceDetails = () => {
           </Link>
           <Typography color="text.primary">{selectedService.title}</Typography>
         </Breadcrumbs>
-
-
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
+        <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 2,
+              marginBottom: 3,
+              flexWrap: 'wrap',
+            }}>
+        <Typography variant="h4" fontWeight="bold" gutterBottom>
               {selectedService.title}
             </Typography>
+        </Box>
+        <Box
+            className="filterOptions"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 2,
+              marginBottom: 3,
+              flexWrap: 'wrap',
+            }}
+          >
+            {selectedService.categories.map((category, index) => (
+              <Typography
+                key={index}
+                variant="button"
+                className={`filterItem ${activeFilter?.name === category.name ? 'active' : ''}`}
+                onClick={() => handleFilter(category)}
+                sx={{
+                  cursor: 'pointer',
+                  padding: '5px 10px',
+                  backgroundColor: activeFilter?.name === category.name ? theme.palette.primary.main : 'transparent',
+                  color: activeFilter?.name === category.name ? 'white' : theme.palette.text.primary,
+                  borderRadius: 1,
+                  '&:hover': {
+                    backgroundColor: theme.palette.primary.light,
+                    color: 'white',
+                  },
+                }}
+              >
+                {category.name}
+              </Typography>
+            ))}
+          </Box>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            
             <Typography variant="body1" gutterBottom>
               {selectedService.description}
             </Typography>
           </Grid>
 
-          {/* Image and Text Content */}
-          <Grid container spacing={2} mt={2} direction={isMobile ? 'row' : 'row'}>
-            {/* List of services */}
-            <Grid item xs={12} md={5}>
-              <List>
-                {services.map((service) => (
-                  <ListItem
-                    key={service.id}
-                    component={Link}
-                    to={`/services/${service.id}`}
-                    selected={selectedService.id === service.id}
-                    sx={{
-                      color: 'black',
-                      '&.Mui-selected': {
-                        backgroundColor: 'primary.main',
-                      },
-                      textDecoration: 'none',
-                    }}
-                    button
-                  >
-                    <ListItemText primary={service.title} />
-                  </ListItem>
-                ))}
-              </List>
-            </Grid>
+          {/* Category Filter */}
+          
 
-            {/* Image Section */}
-            <Grid item xs={12} md={7}>
-              <Paper>
-                <Box
-                  component="img"
-                  src="https://via.placeholder.com/300x200"
-                  alt={selectedService.title}
-                  sx={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: 1,
-                  }}
-                />
-              </Paper>
+          {/* Filtered Output */}
+          <Grid container spacing={2} mt={2}>
+            <Grid item xs={12} md={5}>
               <Typography variant="h6" gutterBottom>
-                Temporibus et in vero dicta aut
+                Selected Category: {activeFilter?.name}
               </Typography>
               <Typography variant="body2">
-                Temporibus et in vero dicta aut eius lidero plastis trand lined
-                voluptas dolorem ut voluptas.
+                {activeFilter?.description}
               </Typography>
+            </Grid>
+
+            {/* Image Slider Section */}
+            <Grid item xs={12} md={7}>
+              <Paper>
+                <Carousel>
+                  {activeFilter?.images.map((image, index) => (
+                    <Box
+                      key={index}
+                      component="img"
+                      src={image}
+                      alt={`${selectedService.title} - ${activeFilter?.name}`}
+                      sx={{
+                        width: '100%',
+                        height: 'auto',
+                        borderRadius: 1,
+                      }}
+                    />
+                  ))}
+                </Carousel>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
