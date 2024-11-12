@@ -88,15 +88,19 @@ function Resume() {
   }, [hasAnimated]);
 
   return (
-    <Box ref={resumeRef} className="resumeSection" sx={{ padding: '20px' }}>
+    <Box ref={resumeRef} className="resumeSection" sx={{ padding: '20px', color: "#003049" }}>
       <Typography variant="h3" align="center" gutterBottom>
         My Resume
       </Typography>
 
       {/* Education Section */}
-      <Box className="resumeCategory">
+      <Box className="resumeCategory" sx={{ color: '#393d3f' }}>
         <Typography variant="h4" className="resumeTitle">
-          <SchoolIcon sx={{ marginRight: '10px' }} /> Education
+          <SchoolIcon sx={{ marginRight: '10px', color: '#00458b' }} />
+          <Typography variant="h4" sx={{ color: '#002f6c' }}>
+
+            Education
+          </Typography>
         </Typography>
         <Divider sx={{ marginBottom: '20px' }} />
         <Grid container spacing={4}>
@@ -123,9 +127,13 @@ function Resume() {
       </Box>
 
       {/* Experience Section */}
-      <Box className="resumeCategory" sx={{ marginTop: '40px' }}>
+      <Box className="resumeCategory" sx={{ marginTop: '40px', color: '#393d3f' }}>
         <Typography variant="h4" className="resumeTitle">
-          <WorkIcon sx={{ marginRight: '10px' }} /> Experience
+          <WorkIcon sx={{ marginRight: '10px', color: '#00458b' }} />
+          <Typography variant="h4" sx={{ color: '#002f6c' }}>
+
+            Experience
+          </Typography>
         </Typography>
         <Divider sx={{ marginBottom: '20px' }} />
         <Grid container spacing={4}>
@@ -151,9 +159,13 @@ function Resume() {
         </Grid>
       </Box>
       {/* Certification Section */}
-      <Box className="resumeCategory" sx={{ marginTop: '40px' }}>
+      <Box className="resumeCategory" sx={{ marginTop: '40px', color: '#393d3f' }}>
         <Typography variant="h4" className="resumeTitle">
-          <WorkIcon sx={{ marginRight: '10px' }} /> Certification
+          <WorkIcon sx={{ marginRight: '10px' ,color: '#00458b'}} /> 
+          <Typography variant="h4" sx={{ color: '#002f6c' }}>
+
+            Certification
+          </Typography>
         </Typography>
         <Divider sx={{ marginBottom: '20px' }} />
         <Grid container spacing={4}>
@@ -179,9 +191,13 @@ function Resume() {
         </Grid>
       </Box>
       {/* Courses Section */}
-      <Box className="resumeCategory" sx={{ marginTop: '40px' }}>
+      <Box className="resumeCategory" sx={{ marginTop: '40px', color: '#393d3f' }}>
         <Typography variant="h4" className="resumeTitle">
-          <WorkIcon sx={{ marginRight: '10px' }} /> Courses
+          <WorkIcon sx={{ marginRight: '10px', color: '#00458b' }} /> 
+          <Typography variant="h4" sx={{ color: '#002f6c' }}>
+
+            Courses
+          </Typography>
         </Typography>
         <Divider sx={{ marginBottom: '20px' }} />
         <Grid container spacing={4}>

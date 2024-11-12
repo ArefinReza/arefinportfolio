@@ -10,7 +10,7 @@ import profileImage from '../assets/image/profileImage.jpg'
 function About() {
     return (
         <Box className="aboutSection" sx={{ padding: '20px', color: 'text.primary' }}>
-            <Typography variant="h3" align="center" gutterBottom>
+            <Typography variant="h3" align="center" gutterBottom sx={{ color: '#003049' }}>
                 About Me
             </Typography>
 
@@ -35,9 +35,36 @@ function About() {
                 {/* Right Section - Details */}
                 <Grid item xs={12} md={8}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                        <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center' }}>
-                            <PersonIcon sx={{ marginRight: 1, color: 'primary.main' }} /> UI/UX Designer
-                        </Typography>
+                        <Box sx={{ position: 'relative', display: 'inline-block', paddingBottom: 1 }}>
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    color: '#00458b',
+                                    position: 'relative',
+                                    zIndex: 1,
+                                }}
+                            >
+                                <PersonIcon sx={{ marginRight: 1 }} />
+                                MD. Arefin Reza
+                            </Typography>
+                            {/* Stylized rectangle background */}
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    bottom: 0,
+                                    left: 189,
+                                    width: '25px', // Slightly wider
+                                    height: '25px', // Slightly taller
+                                    background: 'linear-gradient(135deg, #FFD700, #FFA500)', // Gradient color
+                                    zIndex: 0,
+                                    borderRadius: '8px 2px 8px 2px', // Custom border radius for an angular look
+                                    transform: 'translateY(-6px) rotate(15deg)', // Adds a slight rotation for style
+                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', // Soft shadow for depth
+                                }}
+                            />
+                        </Box>
                         <Typography variant="body2" color="textSecondary">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula enim in dui fringilla...
                         </Typography>
@@ -46,23 +73,69 @@ function About() {
                             {/* Left Column */}
                             <Box>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <CakeIcon sx={{ marginRight: 1, color: 'primary.main' }} /> Birthday: December 23, 1998
+                                    <CakeIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'bounce 2s infinite',
+                                            '@keyframes bounce': {
+                                                '0%, 100%': { transform: 'translateY(0)' },
+                                                '50%': { transform: 'translateY(-4px)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    Birthday: December 23, 1998
                                 </Typography>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <WebIcon sx={{ marginRight: 1, color: 'primary.main' }} /> Website: www.arefin.com
+                                    <WebIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'spin 4s linear infinite',
+                                            '@keyframes spin': {
+                                                '0%': { transform: 'rotate(0deg)' },
+                                                '100%': { transform: 'rotate(360deg)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    Website: www.arefin.com
                                 </Typography>
                             </Box>
 
                             {/* Right Column */}
                             <Box>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <PersonIcon sx={{ marginRight: 1, color: 'primary.main' }} /> Age: 25
+                                    <PersonIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'pulse 2s infinite',
+                                            '@keyframes pulse': {
+                                                '0%, 100%': { transform: 'scale(1)' },
+                                                '50%': { transform: 'scale(1.1)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    Age: 25
                                 </Typography>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <SchoolIcon sx={{ marginRight: 1, color: 'primary.main' }} /> Degree: Bachelor of Science
+                                    <SchoolIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'shake 1.5s infinite',
+                                            '@keyframes shake': {
+                                                '0%, 100%': { transform: 'translateX(0)' },
+                                                '25%': { transform: 'translateX(-2px)' },
+                                                '75%': { transform: 'translateX(2px)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    Degree: Bachelor of Science
                                 </Typography>
                             </Box>
                         </Box>
+
                     </Box>
                 </Grid>
             </Grid>
@@ -70,13 +143,13 @@ function About() {
             {/* Client Stats Section */}
             <Box className="clientStats" sx={{ display: 'flex', justifyContent: 'space-around', mt: 4 }}>
                 <Box sx={{ textAlign: 'center' }}>
-                    <DoneAllIcon sx={{ fontSize: 40, color: 'primary.main' }} />
-                    <Typography variant="h5">100+</Typography>
+                    <DoneAllIcon sx={{ fontSize: 40, color: '#00458b' }} />
+                    <Typography variant="h5">60+</Typography>
                     <Typography variant="body2">Happy Clients</Typography>
                 </Box>
                 <Box sx={{ textAlign: 'center' }}>
-                    <DoneAllIcon sx={{ fontSize: 40, color: 'primary.main' }} />
-                    <Typography variant="h5">50+</Typography>
+                    <DoneAllIcon sx={{ fontSize: 40, color: '#00458b' }} />
+                    <Typography variant="h5">40+</Typography>
                     <Typography variant="body2">Projects Done</Typography>
                 </Box>
             </Box>

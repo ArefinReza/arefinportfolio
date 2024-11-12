@@ -37,7 +37,7 @@ function Portfolio() {
 
   return (
     <Box className="portfolioSection" sx={{ padding: '20px' }}>
-      <Typography variant="h3" align="center" gutterBottom>
+      <Typography variant="h3" align="center" gutterBottom sx={{color:'#003049'}}>
         Some of My Portfolio
       </Typography>
       <Typography variant="subtitle1" align="center" sx={{ marginBottom: '20px' }}>
@@ -46,18 +46,30 @@ function Portfolio() {
 
       {/* Filter options */}
       <Box className="filterOptions" sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginBottom: 3, flexWrap: 'wrap' }}>
-        {categories.map((category, index) => (
-          <Typography
-            key={index}
-            variant="button"
-            className={`filterItem ${activeFilter === category ? 'active' : ''}`}
-            onClick={() => handleFilter(category)}
-            sx={{ cursor: 'pointer', padding: '5px 10px' }}
-          >
-            {category}
-          </Typography>
-        ))}
-      </Box>
+  {categories.map((category, index) => (
+    <Typography
+      key={index}
+      variant="button"
+      className={`filterItem ${activeFilter === category ? 'active' : ''}`}
+      onClick={() => handleFilter(category)}
+      sx={{
+        cursor: 'pointer',
+        padding: '5px 10px',
+        backgroundColor: activeFilter === category ? '#003366' : 'transparent',
+        color: activeFilter === category ? '#FFD700' : '#000',
+        borderRadius: '4px',  // Optional: adds rounded corners
+        '&:hover': {
+          backgroundColor: '#003366', // Darker shade on hover
+          color: '#FFD700',          // Golden color on hover
+        },
+        transition: 'all 0.3s ease',  // Smooth transition for color changes
+      }}
+    >
+      {category}
+    </Typography>
+  ))}
+</Box>
+
 
       {/* Portfolio grid */}
       <Grid container spacing={isMobile ? 2 : 4}>

@@ -100,7 +100,7 @@ const Contact = () => {
               fullWidth
               variant="contained"
               sx={{
-                background: '#016A70', // Primary color
+                background: '#00458b', // Primary color
                 color: 'white',
                 fontWeight: 'bold',
                 py: 1.5,
@@ -109,7 +109,7 @@ const Contact = () => {
                 transition: 'color 0.3s ease',
                 zIndex: 1,
                 '&:hover': {
-                  color: 'white',
+                  color:'#FFD700',
                 },
                 '&::before': {
                   content: '""',
@@ -118,9 +118,10 @@ const Contact = () => {
                   left: '-100%',
                   width: '100%',
                   height: '100%',
-                  backgroundColor: '#1976d2', // Hover color
+                  backgroundColor: '#003366', // Hover color
                   transition: 'left 0.3s ease',
                   zIndex: -1,
+                  
                 },
                 '&:hover::before': {
                   left: 0,

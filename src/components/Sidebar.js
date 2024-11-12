@@ -10,12 +10,12 @@ const Sidebar = () => {
   const toggleDrawer = (isOpen) => () => {
     setOpen(isOpen);
   };
-  
+
   const sidebarContent = (
     <Box
       sx={{
         width: { xs: '100vw', sm: '300px' },
-        bgcolor: '#016A70',
+        bgcolor: '#003049',
         color: 'white',
         display: 'flex',
         flexDirection: 'column',
@@ -35,59 +35,118 @@ const Sidebar = () => {
           borderRadius: '50%',
           alignItems: 'center',
           mb: 3,
-          margin:'0 auto',
+          margin: '0 auto',
           marginTop: 3,
-        marginBottom:2,
+          marginBottom: 2,
         }}
       />
       <Typography variant="h5" fontWeight="bold"
-      sx={{
+        sx={{
 
-        margin:'0 auto',
-        marginTop: 2,
-        marginBottom:2,
-      }}>
+          margin: '0 auto',
+          marginTop: 2,
+          marginBottom: 2,
+        }}>
         MD. Arefin Reza
       </Typography>
 
       <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', my: 2 }}>
-        <IconButton color="inherit"><Facebook /></IconButton>
-        <IconButton color="inherit"><Twitter /></IconButton>
-        <IconButton color="inherit"><LinkedIn /></IconButton>
-        <IconButton color="inherit"><Instagram /></IconButton>
-        <IconButton color="inherit"><GitHub /></IconButton>
+        <IconButton
+          color="inherit"
+          sx={{
+            animation: 'bounce 2s infinite ease-in-out',
+            '@keyframes bounce': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' },
+            }
+          }}
+        >
+          <Facebook />
+        </IconButton>
+
+        <IconButton
+          color="inherit"
+          sx={{
+            animation: 'flap 2s infinite ease-in-out',
+            '@keyframes flap': {
+              '0%, 100%': { transform: 'rotate(0deg)' },
+              '50%': { transform: 'rotate(15deg)' },
+            }
+          }}
+        >
+          <Twitter />
+        </IconButton>
+
+        <IconButton
+          color="inherit"
+          sx={{
+            animation: 'pulse 2s infinite',
+            '@keyframes pulse': {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.1)' },
+            }
+          }}
+        >
+          <LinkedIn />
+        </IconButton>
+
+        <IconButton
+          color="inherit"
+          sx={{
+            animation: 'rotate 3s infinite linear',
+            '@keyframes rotate': {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            }
+          }}
+        >
+          <Instagram />
+        </IconButton>
+
+        <IconButton
+          color="inherit"
+          sx={{
+            animation: 'pop 2s infinite ease-in-out',
+            '@keyframes pop': {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.2)' },
+            }
+          }}
+        >
+          <GitHub />
+        </IconButton>
       </Box>
 
       <List sx={{ width: '100%' }}>
-      <ListItem button component={Link} to="home" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><Home sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Home" />
-      </ListItem>
-      <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="About" />
-      </ListItem>
-      <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Skills" />
-      </ListItem>
-      <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><BusinessCenter sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Resume" />
-      </ListItem>
-      <ListItem button component={Link} to="portfolio" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><Folder sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Portfolio" />
-      </ListItem>
-      <ListItem button component={Link} to="services" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><Work sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Services" />
-      </ListItem>
-      <ListItem button component={Link} to="contact" spy smooth offset={-50} activeClass="active">
-        <ListItemIcon sx={{ justifyContent: 'center' }}><ContactMail sx={{ color: 'white' }} /></ListItemIcon>
-        <ListItemText primary="Contact" />
-      </ListItem>
-    </List>
+        <ListItem button component={Link} to="home" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><Home sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="About" />
+        </ListItem>
+        <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Skills" />
+        </ListItem>
+        <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><BusinessCenter sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Resume" />
+        </ListItem>
+        <ListItem button component={Link} to="portfolio" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><Folder sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Portfolio" />
+        </ListItem>
+        <ListItem button component={Link} to="services" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><Work sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Services" />
+        </ListItem>
+        <ListItem button component={Link} to="contact" spy smooth offset={-50} activeClass="active">
+          <ListItemIcon sx={{ justifyContent: 'center' }}><ContactMail sx={{ color: '#FFD700' }} /></ListItemIcon>
+          <ListItemText primary="Contact" />
+        </ListItem>
+      </List>
     </Box>
   );
 

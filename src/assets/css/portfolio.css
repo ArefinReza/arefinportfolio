@@ -4,17 +4,11 @@
   
   .filterOptions .filterItem {
     font-weight: bold;
-    color: #555;
     padding: 8px 16px;
     border-radius: 20px;
     transition: background-color 0.3s;
   }
   
-  .filterOptions .filterItem.active,
-  .filterOptions .filterItem:hover {
-    background-color: #1976d2;
-    color: #fff;
-  }
   
   .portfolioItem {
     position: relative;

@@ -76,7 +76,7 @@ const services = [
     ]
   },
 ];
-export{services}
+export { services }
 
 function Services() {
   const navigate = useNavigate();
@@ -125,17 +125,23 @@ function Services() {
             {/* Icon Circle */}
             <IconButton
               sx={{
-                backgroundColor: '#1976d2',
+                backgroundColor: '#00458b',
                 color: '#fff',
                 fontSize: '2rem',
                 p: 2,
                 mr: 3,
                 borderRadius: '50%',
                 '& svg': { fontSize: '1.8rem' },
+                transition: 'background-color 0.3s, color 0.3s', // Smooth transition effect
+                '&:hover': {
+                  backgroundColor: '#003366', // Change to a darker shade on hover
+                  color: '#FFD700', // Change icon color on hover
+                },
               }}
             >
               {service.icon}
             </IconButton>
+
 
             {/* Content */}
             <CardContent sx={{ p: 0 }}>

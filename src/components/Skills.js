@@ -85,7 +85,7 @@ function Skills() {
   }, [isInView]);
 
   return (
-    <Box ref={skillsRef} className="skillsSection" sx={{ padding: '20px', color: 'text.primary' }}>
+    <Box ref={skillsRef} className="skillsSection" sx={{ padding: '20px', color: '#003049' }}>
       <Typography variant="h3" align="center" gutterBottom>
         My Skills
       </Typography>
@@ -100,7 +100,7 @@ function Skills() {
             borderRadius: '8px' 
           }}
         >
-          <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2, color: 'primary.main' }}>
+          <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2, color: '#003049' }}>
             {category.category}
           </Typography>
 
@@ -109,7 +109,7 @@ function Skills() {
               <Grid item xs={12} sm={6} md={4} key={skill.name}>
                 <Box className="skillBox" sx={{ textAlign: 'center', marginBottom: '20px' }}>
                   {/* Skill Icon with Hover Effect */}
-                  <Box className="skillIcon" sx={{ fontSize: 10, marginBottom: '10px', color: 'primary.main' }}>
+                  <Box className="skillIcon" sx={{ fontSize: 10, marginBottom: '10px', color: '#003049' }}>
                     {skill.icon}
                   </Box>
 
@@ -119,7 +119,7 @@ function Skills() {
                   </Typography>
 
                   {/* Skill Progress Bar with Animated Percentage */}
-                  <Box sx={{ width: '100%', mt: 1 }}>
+                  <Box sx={{ width: '100%', mt: 1, }}>
                     <LinearProgress
                       variant="determinate"
                       value={progressValues[catIndex][skillIndex]}
@@ -127,8 +127,9 @@ function Skills() {
                         height: 10,
                         borderRadius: 5,
                         '& .MuiLinearProgress-bar': {
-                          backgroundColor: 'primary.main',
+                          backgroundColor: '#003566',
                           transition: 'width 0.3s ease',
+                          
                         },
                       }}
                     />
