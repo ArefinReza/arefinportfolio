@@ -10,6 +10,7 @@ import Services from './Services';
 import Contact from './Contact';
 import Home from './Home';
 import Footer from './Footer';
+import Reviews from './Reviews';
 const MainContent = () => {
   return (
     <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 0px 300px' }, bgcolor: 'background.default' }}>
@@ -59,7 +60,11 @@ const MainContent = () => {
           </Typography>
         
       </Box>
-
+      <Box id="footer" >
+        <Typography variant="h4" fontWeight="bold">
+          <Reviews/>
+        </Typography>
+      </Box>
       {/* Contact Section */}
       <Box id="contact" sx={{ my: 4 }}>
         <Typography variant="h4" fontWeight="bold">

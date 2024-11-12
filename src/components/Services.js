@@ -27,19 +27,19 @@ const services = [
     icon: <DesignServicesIcon />,
     categories: [
       { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
-      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
-      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+      { name: 'Figma', description: 'Figma development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'Illustrator', description: 'Illustrator management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
     ]
   },
   {
     id: 3,
-    title: "Business Analysis",
+    title: "Data Analysis",
     description: "Providing data-driven insights for better decision-making.",
     icon: <AssessmentIcon />,
     categories: [
-      { name: 'Frontend', description: 'Frontend development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
-      { name: 'Backend', description: 'Backend development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
-      { name: 'Database', description: 'Database management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+      { name: 'Python', description: 'Python development details.', images: ['https://mdbcdn.b-cdn.net/wp-content/uploads/2017/12/carousel.jpg', 'https://s3-alpha.figma.com/hub/file/4640124499/85354f41-8eba-4ceb-ae49-55195943c4c7-cover.png'] },
+      { name: 'Excel', description: 'Excel development details.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
+      { name: 'MySql', description: 'MySql management and optimization.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
     ]
   },
   {
@@ -88,12 +88,26 @@ function Services() {
   return (
     <Box sx={{ maxWidth: '1200px', mx: 'auto', px: 3, py: 5 }}>
       {/* Header */}
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" align="center" gutterBottom sx={{ color: '#003049' }}>
         Services
       </Typography>
-      <Typography variant="body1" sx={{ mb: 4, maxWidth: '800px' }}>
+      <Typography
+        variant="body1"
+        align="center"
+        sx={{
+          mb: 4,
+          fontFamily: "'Playfair Display', serif",
+          fontSize: '1.25rem',
+          fontWeight: 500,
+          lineHeight: 1.6,
+          color: '#333',
+          letterSpacing: '0.5px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)',
+        }}
+      >
         We provide a wide range of services to help you grow and succeed in your business. Our team is dedicated to delivering the best solutions tailored to your needs.
       </Typography>
+
 
       {/* Services Grid */}
       <Box
@@ -155,6 +169,7 @@ function Services() {
           </Card>
         ))}
       </Box>
+      {/* <Reviews/> */}
     </Box>
   );
 }

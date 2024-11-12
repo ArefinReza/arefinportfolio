@@ -1,0 +1,110 @@
+.reviews-container {
+    max-width: 1150px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 300px;
+    /* margin-left: 200px; */
+  }
+  
+  .reviews-list {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .review-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin-right: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-rating {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 8px;
+  }
+  
+  .review-comment {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .reviewer-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .reviewer-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .reviews-list:hover {
+    animation-play-state: paused;
+  }
+  
+  .review-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .review-item {
+      width: 150px;
+    }
+    .reviews-container {
+      height: 200px;
+      margin-left: 0px;
+      margin-right: o;
+      max-width: 400px;
+    }
+  }
+  @media (max-width: 1000px) {
+    .review-item {
+      width: 150px;
+    }
+    .reviews-container {
+      height: 200px;
+      margin-left: 0px;
+      margin-right: o;
+      max-width: 400px;
+    }
+  }
+  

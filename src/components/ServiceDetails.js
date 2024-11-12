@@ -59,15 +59,15 @@ const ServiceDetails = () => {
             mb: 2,
           }}
         >
-          <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#00458b' }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <HomeIcon fontSize="small" sx={{ mr: 0.5 }} /> Home
+              <HomeIcon fontSize="small" sx={{ mr: 0.5, }} /> Home
             </Box>
           </Link>
-          <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.main }}>
+          <Link to="/" style={{ textDecoration: 'none', color:'#00458b' }}>
             Services
           </Link>
-          <Typography color="text.primary">{selectedService.title}</Typography>
+          <Typography color='#00458b'>{selectedService.title}</Typography>
         </Breadcrumbs>
         <Box sx={{
               display: 'flex',
@@ -76,10 +76,11 @@ const ServiceDetails = () => {
               marginBottom: 3,
               flexWrap: 'wrap',
             }}>
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography variant="h4" fontWeight="bold" gutterBottom sx={{color: "#003049"}}>
             {selectedService.title}
           </Typography>
         </Box>
+        {/* filter options */}
         <Box
             className="filterOptions"
             sx={{
@@ -99,12 +100,12 @@ const ServiceDetails = () => {
                 sx={{
                   cursor: 'pointer',
                   padding: '5px 10px',
-                  backgroundColor: activeFilter?.name === category.name ? theme.palette.primary.main : 'transparent',
-                  color: activeFilter?.name === category.name ? 'white' : theme.palette.text.primary,
+                  backgroundColor: activeFilter?.name === category.name ? '#003366' : 'transparent',
+                  color: activeFilter?.name === category.name ? '#FFD700' :'#000',
                   borderRadius: 1,
                   '&:hover': {
-                    backgroundColor: theme.palette.primary.light,
-                    color: 'white',
+                    backgroundColor: '#003366',
+                    color: '#FFD700',
                   },
                 }}
               >
@@ -120,12 +121,12 @@ const ServiceDetails = () => {
           </Grid>
 
           {/* Category Filter */}
-          <Grid container spacing={2} mt={2}>
+          <Grid container spacing={2} mt={2} >
             <Grid item xs={12} md={5}>
-              <Typography variant="h6" gutterBottom>
-                Selected Category: {activeFilter?.name}
+              <Typography variant="h6" fontWeight="bold" gutterBottom sx={{color: "#003049", padding:"10px"}}>
+                {activeFilter?.name}
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{padding:'10px'}}>
                 {activeFilter?.description}
               </Typography>
             </Grid>

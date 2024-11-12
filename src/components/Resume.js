@@ -223,52 +223,52 @@ function Resume() {
           ))}
         </Grid>
         <Grid item xs={12} display="flex" justifyContent="center">
-  <Button
-    component="a"
-    href="https://drive.google.com/file/d/1bCEjxJ160JGbEg9S1P7OBYoAAAIL9t5M/view?usp=sharing" // Replace with your Google Drive link
-    target="_blank"
-    variant="contained"
-    sx={{
-      width: '200px',
-      marginTop: '40px',
-      background: '#00458b',
-      color: 'white',
-      fontWeight: 'bold',
-      py: 1.5,
-      transform: 'skew(-20deg)',
-      position: 'relative',
-      overflow: 'hidden',
-      transition: 'color 0.3s ease',
-      zIndex: 1,
-      '&:hover': {
-        color: '#FFD700',
-      },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: '-100%',
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#003366',
-        transition: 'left 0.3s ease',
-        zIndex: -1,
-      },
-      '&:hover::before': {
-        left: 0,
-      },
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textTransform: 'none',
-      '& span': {
-        transform: 'skew(20deg)',
-      },
-    }}
-  >
-    <span style={{ fontSize: '18px' }}>Download Resume</span>
-  </Button>
-</Grid>
+          <Button
+            component="a"
+            href="https://drive.google.com/file/d/1bCEjxJ160JGbEg9S1P7OBYoAAAIL9t5M/view?usp=sharing"
+            target="_blank"
+            variant="contained"
+            sx={{
+              width: '200px',
+              marginTop: '40px',
+              background: '#00458b',
+              color: 'white',
+              fontWeight: 'bold',
+              py: 1.5,
+              transform: 'skew(-20deg)',
+              position: 'relative',
+              overflow: 'hidden',
+              transition: 'color 0.3s ease',
+              zIndex: 1,
+              '&:hover': {
+                color: '#FFD700',
+              },
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: '-100%',
+                width: '100%',
+                height: '100%',
+                backgroundColor: '#003366',
+                transition: 'left 0.3s ease',
+                zIndex: -1,
+              },
+              '&:hover::before': {
+                left: 0,
+              },
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textTransform: 'none',
+              '& span': {
+                transform: 'skew(20deg)',
+              },
+            }}
+          >
+            <span style={{ fontSize: '18px' }}>Download Resume</span>
+          </Button>
+        </Grid>
 
 
       </Box>
