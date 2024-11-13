@@ -11,8 +11,9 @@ const skills = [
   {
     category: "Programming Languages",
     skills: [
-      { name: 'Python', icon: <CodeIcon />, percentage: 90 },
-      { name: 'JavaScript', icon: <CodeIcon />, percentage: 90 },
+      { name: 'Python', icon: <CodeIcon />, percentage: 60 },
+      { name: 'JavaScript', icon: <CodeIcon />, percentage: 70 },
+      { name: 'PHP', icon: <CodeIcon />, percentage: 60 },
     ],
   },
   {

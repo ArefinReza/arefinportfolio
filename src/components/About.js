@@ -66,7 +66,7 @@ function About() {
                             />
                         </Box>
                         <Typography variant="body2" color="textSecondary">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula enim in dui fringilla...
+                            A professionals Full Stack Web Developer and Programmer
                         </Typography>
 
                         <Box className="details" sx={{ display: 'flex', gap: 4, mt: 2 }}>

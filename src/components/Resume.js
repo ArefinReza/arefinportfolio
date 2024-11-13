@@ -8,15 +8,15 @@ import '../assets/css/resume.css';
 const educationData = [
   {
     degree: 'Bachelor of Computer Science',
-    institution: 'XYZ University',
-    year: '2018 - 2022',
+    institution: 'Uttara University',
+    year: '2021 - 2024',
     description: 'Graduated with honors in Computer Science.',
   },
   {
-    degree: 'High School Diploma',
-    institution: 'ABC High School',
-    year: '2016 - 2018',
-    description: 'Specialized in Science and Mathematics.',
+    degree: 'H.S.C',
+    institution: 'Rohanpur Gov. Yousuf Ali College',
+    year: '2016 - 2020',
+    description: 'Depertment of Science',
   },
 ];
 
