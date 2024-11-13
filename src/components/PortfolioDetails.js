@@ -13,6 +13,8 @@ import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-mater
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import '../assets/css/ServiceDetails.css';
+import Footer from './Footer'
+
 import moonit1 from '../assets/image/portfolioDetails/moonit1.png'
 import moonit2 from '../assets/image/portfolioDetails/moonit2.png'
 import moonit3 from '../assets/image/portfolioDetails/moonit3.png'
@@ -130,6 +132,7 @@ const PortfolioDetails = () => {
   };
 
   return (
+    <Box>
     <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', padding: 2 }}>
       {/* Main Content */}
       <Box sx={{ flexGrow: 1, margin: '20px' }}>
@@ -242,6 +245,8 @@ const PortfolioDetails = () => {
           </Grid>
         </Grid>
       </Box>
+    </Box>
+        <Footer/>  
     </Box>
   );
 };

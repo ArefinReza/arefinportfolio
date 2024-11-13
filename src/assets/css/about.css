@@ -7,7 +7,7 @@ h1::after{
     display: block;
     height: 3px;
     background-color: #f39c12;
-    width: 150px;;
+    width: 150px;
 }
 .aboutme{
     margin-top: 10px;
