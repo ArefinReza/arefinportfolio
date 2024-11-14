@@ -52,7 +52,8 @@ const Contact = () => {
           >
             <iframe
               title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153187!3d-37.81720997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df0c09fdf%3A0x5045675218ce6e0!2sVictoria%20Market!5e0!3m2!1sen!2sau!4v1616025506140!5m2!1sen!2sau"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53453.03658804763!2d90.38358161639019!3d23.8289281419639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c643853bbba1%3A0xd8499cf6c4609682!2zVElPMDA3LCDgpqbgpoMg4Kau4Kan4KeN4KavIOCmquCmvuCnnOCmviDgprDgp4vgpqEsIERoYWth!5e1!3m2!1sen!2sbd!4v1731608617639!5m2!1sen!2sbd"
+              
               width="100%"
               height="200"
               style={{ border: 0 }}
