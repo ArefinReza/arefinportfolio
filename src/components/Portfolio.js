@@ -3,7 +3,8 @@ import { Box, Typography, Grid, IconButton, Modal, Fade } from '@mui/material';
 import { OpenInFull, Info } from '@mui/icons-material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import '../assets/css/portfolio.css'; // Ensure your CSS is updated as well
-import { portfolioData } from './PortfolioDetails';
+// import { portfolioData } from './PortfolioDetails';
+import { portfolioData } from './Api';
 
 const categories = ['All', 'ECommerce', 'Portfolio', 'Apps', 'Photo Design', 'Templates'];
 

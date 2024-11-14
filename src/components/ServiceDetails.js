@@ -14,7 +14,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import '../assets/css/ServiceDetails.css';
-import { services } from './Services';
+import { services } from './Api';
 import Contact from './Contact'
 import Footer from './Footer'
 const ServiceDetails = () => {
