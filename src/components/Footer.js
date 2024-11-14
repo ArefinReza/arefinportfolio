@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                backgroundColor: '#304146',
+                backgroundColor: '#1d2225',
                 color: 'white',
                 py: 4,
                 px: 2,
@@ -28,46 +28,14 @@ const Footer = () => {
                     <Typography variant="h6" fontWeight="bold" gutterBottom>
                         Quick Links
                     </Typography>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, '& a': { fontSize: '16px' } }}>
-                        <Link href="/about" color="inherit" underline="hover">
-                            About
-                        </Link>
-                        <Link href="/services" color="inherit" underline="hover">
-                            Services
-                        </Link>
-                        <Link href="/portfolio" color="inherit" underline="hover">
-                            Portfolio
-                        </Link>
-                        <Link href="/contact" color="inherit" underline="hover">
-                            Contact Us
-                        </Link>
-                    </Box>
-                </Grid>
-
-                {/* Contact Info Section */}
-                <Grid item xs={12} md={4}>
-                    <Typography variant="h6" fontWeight="bold" gutterBottom>
-                        Contact Info
-                    </Typography>
-                    <Typography variant="body2">
-                        Phone: +880 1819 222 446
-                    </Typography>
-                    <Typography variant="body2">
-                        Email: arefinsaim@gmail.com
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                        Address: Dhaka, 1230, Bangladesh
-                    </Typography>
-
-                    {/* Social Media Icons */}
-                    <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, '& a': { fontSize: '16px' } }}>
                         <IconButton
                             sx={{
                                 color: '#3b5998', // Facebook color
                                 '&:hover': { color: '#8b9dc3' },
                             }}
                             aria-label="Facebook"
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/arefin.reza.saim" target='_blank'
                         >
                             <Facebook />
                         </IconButton>
@@ -87,7 +55,7 @@ const Footer = () => {
                                 '&:hover': { color: '#c0deed' },
                             }}
                             aria-label="LinkedIn"
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/arefinreza46/" target='_blank'
                         >
                             <LinkedIn />
                         </IconButton>
@@ -97,10 +65,31 @@ const Footer = () => {
                                 '&:hover': { color: '#f7b2c7' },
                             }}
                             aria-label="Instagram"
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/arefinsaim/" target='_blank'
                         >
                             <Instagram />
                         </IconButton>
+                    </Box>
+                </Grid>
+
+                {/* Contact Info Section */}
+                <Grid item xs={12} md={4}>
+                    <Typography variant="h6" fontWeight="bold" gutterBottom>
+                        Contact Info
+                    </Typography>
+                    <Typography variant="body2">
+                        Phone: +880 1819 222 446
+                    </Typography>
+                    <Typography variant="body2">
+                        Email: arefinsaim@gmail.com
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                        Address: Dhaka, 1230, Bangladesh
+                    </Typography>
+
+                    {/* Social Media Icons */}
+                    <Box sx={{ display: 'flex', gap: 1, }}>
+                        {/*  */}
                     </Box>
                 </Grid>
             </Grid>

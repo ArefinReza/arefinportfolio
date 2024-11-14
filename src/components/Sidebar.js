@@ -51,7 +51,7 @@ const Sidebar = () => {
       </Typography>
 
       <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', my: 2 }}>
-        <IconButton
+        <IconButton href='https://www.facebook.com/arefin.reza.saim' target='_blank'
           color="inherit"
           sx={{
             animation: 'bounce 2s infinite ease-in-out',
@@ -77,7 +77,7 @@ const Sidebar = () => {
           <Twitter />
         </IconButton>
 
-        <IconButton
+        <IconButton href='https://www.linkedin.com/in/arefinreza46/' target='_blank'
           color="inherit"
           sx={{
             animation: 'pulse 2s infinite',
@@ -90,7 +90,7 @@ const Sidebar = () => {
           <LinkedIn />
         </IconButton>
 
-        <IconButton
+        <IconButton href='https://www.instagram.com/arefinsaim/' target='_blank'
           color="inherit"
           sx={{
             animation: 'rotate 3s infinite linear',
@@ -103,7 +103,7 @@ const Sidebar = () => {
           <Instagram />
         </IconButton>
 
-        <IconButton
+        <IconButton href='https://github.com/ArefinReza' target='_blank'
           color="inherit"
           sx={{
             animation: 'pop 2s infinite ease-in-out',

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Box, Typography, Avatar, Grid } from '@mui/material';
+import { Box, Typography, Avatar, Grid, Link } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import CakeIcon from '@mui/icons-material/Cake';
 import WebIcon from '@mui/icons-material/Web';
 import SchoolIcon from '@mui/icons-material/School';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import '../assets/css/about.css';
 import profileImage from '../assets/image/profileImage.jpg'
 function About() {
@@ -100,6 +104,36 @@ function About() {
                                     />{' '}
                                     Website: www.arefin.com
                                 </Typography>
+                                <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <FacebookIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'bounce 2s infinite',
+                                            '@keyframes bounce': {
+                                                '0%, 100%': { transform: 'translateY(0)' },
+                                                '50%': { transform: 'translateY(-4px)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    <Link href="https://www.facebook.com/arefin.reza.saim" target="_blank" sx={{textDecoration:'none', color:'text.primary'}}> Facebook
+                                    </Link>
+                                </Typography>
+                                <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <InstagramIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'spin 4s linear infinite',
+                                            '@keyframes spin': {
+                                                '0%': { transform: 'rotate(0deg)' },
+                                                '100%': { transform: 'rotate(360deg)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    <Link href="https://www.instagram.com/arefinsaim/" target="_blank" sx={{textDecoration:'none', color:'text.primary'}}> Instagram
+                                    </Link>
+                                </Typography>
                             </Box>
 
                             {/* Right Column */}
@@ -116,7 +150,7 @@ function About() {
                                             },
                                         }}
                                     />{' '}
-                                    Age: 25
+                                    Father: MD. Erfan Reza
                                 </Typography>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
                                     <SchoolIcon
@@ -132,6 +166,37 @@ function About() {
                                         }}
                                     />{' '}
                                     Degree: Bachelor of Science
+                                </Typography>
+                                <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <LinkedInIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'pulse 2s infinite',
+                                            '@keyframes pulse': {
+                                                '0%, 100%': { transform: 'scale(1)' },
+                                                '50%': { transform: 'scale(1.1)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    <Link href="https://www.linkedin.com/in/arefinreza46/" target="_blank" sx={{textDecoration:'none', color:'text.primary'}}> LinkedIn
+                                    </Link>
+                                </Typography>
+                                <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <GitHubIcon
+                                        sx={{
+                                            marginRight: 1,
+                                            color: '#00458b',
+                                            animation: 'shake 1.5s infinite',
+                                            '@keyframes shake': {
+                                                '0%, 100%': { transform: 'translateX(0)' },
+                                                '25%': { transform: 'translateX(-2px)' },
+                                                '75%': { transform: 'translateX(2px)' },
+                                            },
+                                        }}
+                                    />{' '}
+                                    <Link href="https://github.com/ArefinReza" target="_blank" sx={{textDecoration:'none', color:'text.primary'}}> Github
+                                    </Link>
                                 </Typography>
                             </Box>
                         </Box>
