@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Avatar, Grid, Link } from '@mui/material';
+import { Box, Typography, Grid, Link } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import CakeIcon from '@mui/icons-material/Cake';
 import WebIcon from '@mui/icons-material/Web';

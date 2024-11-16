@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactTyped as Typed } from 'react-typed';
 import { Box, Typography } from '@mui/material';
 import '../assets/css/maincontent.css'
 import About from './About';

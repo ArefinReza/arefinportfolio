@@ -5,65 +5,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import '../assets/css/resume.css';
 
-const educationData = [
-  {
-    degree: 'Bachelor of Computer Science',
-    institution: 'Uttara University',
-    year: '2021 - 2024',
-    description: 'Graduated with honors in Computer Science.',
-  },
-  {
-    degree: 'H.S.C',
-    institution: 'Rohanpur Gov. Yousuf Ali College',
-    year: '2016 - 2020',
-    description: 'Depertment of Science',
-  },
-];
-
-const experienceData = [
-  {
-    title: 'Frontend Developer',
-    company: 'Tech Solutions Inc.',
-    year: '2022 - Present',
-    description: 'Developed responsive user interfaces with React and Material-UI.',
-  },
-  {
-    title: 'Intern Software Engineer',
-    company: 'Web Innovators',
-    year: '2021 - 2022',
-    description: 'Assisted in the development of web applications using JavaScript and Node.js.',
-  },
-];
-
-const certificationData = [
-  {
-    title: 'Python Basic',
-    company: 'Tech Solutions Inc.',
-    year: '2022 - Present',
-    description: 'Developed responsive user interfaces with React and Material-UI.',
-  },
-  {
-    title: 'Database Programming',
-    company: 'Web Innovators',
-    year: '2021 - 2022',
-    description: 'Assisted in the development of web applications using JavaScript and Node.js.',
-  },
-];
-
-const coursesData = [
-  {
-    title: 'Full Stack Web Development',
-    company: 'Web Innovators',
-    year: '2021 - 2022',
-    description: 'Assisted in the development of web applications using JavaScript and Node.js.',
-  },
-  {
-    title: 'Cybersecurity',
-    company: 'Tech Solutions Inc.',
-    year: '2022 - Present',
-    description: 'Developed responsive user interfaces with React and Material-UI.',
-  },
-];
+import {educationData, certificationData, experienceData, coursesData} from './Api'
 
 function Resume() {
   const [isInView, setIsInView] = useState(false);

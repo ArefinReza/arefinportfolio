@@ -18,7 +18,7 @@ import { portfolioData } from './Api';
 const PortfolioDetails = () => {
   const { id } = useParams();
   const [selectedService, setSelectedService] = useState(null);
-  const [activeFilter, setActiveFilter] = useState(null); // Active category filter
+  const [activeFilter, setActiveFilter] = useState(null);
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -27,7 +27,6 @@ const PortfolioDetails = () => {
     const service = portfolioData.find((service) => service.id === id);
     setSelectedService(service);
     if (service) {
-      // Set the initial category to the first one
       setActiveFilter(service.categories[0]);
     }
   }, [id]);
