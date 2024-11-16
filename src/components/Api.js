@@ -17,6 +17,21 @@ import moonit8 from '../assets/image/portfolioDetails/moonit8.png'
 import moonit9 from '../assets/image/portfolioDetails/moonit9.png'
 import moonit10 from '../assets/image/portfolioDetails/moonit10.png'
 
+import moonba1 from '../assets/image/portfolioDetails/moonba1.png'
+import moonba2 from '../assets/image/portfolioDetails/moonba2.png'
+import moonba3 from '../assets/image/portfolioDetails/moonba3.png'
+import moonba4 from '../assets/image/portfolioDetails/moonba4.png'
+import moonba5 from '../assets/image/portfolioDetails/moonba5.png'
+import moonba6 from '../assets/image/portfolioDetails/moonba6.png'
+import moonba7 from '../assets/image/portfolioDetails/moonba7.png'
+import moonba8 from '../assets/image/portfolioDetails/moonba8.png'
+import moonba9 from '../assets/image/portfolioDetails/moonba9.png'
+import moonba10 from '../assets/image/portfolioDetails/moonba10.png'
+import moonba11 from '../assets/image/portfolioDetails/moonba11.png'
+import moonba12 from '../assets/image/portfolioDetails/moonba12.png'
+import moonba13 from '../assets/image/portfolioDetails/moonba13.png'
+import moonba14 from '../assets/image/portfolioDetails/moonba14.png'
+
 import mt1 from '../assets/image/portfolioDetails/mt1.png'
 import mt2 from '../assets/image/portfolioDetails/mt2.png'
 import mt3 from '../assets/image/portfolioDetails/mt3.png'
@@ -243,8 +258,8 @@ const portfolioData = [
      imageUrl: moonit1,
     categories: [
       { name: 'Frontend', description: 'I used React for Frontend.', images: [moonit2, moonit3,moonit4,moonit5,moonit6,moonit7,moonit8,moonit9,moonit10] },
-      { name: 'Backend', description: 'I develop backend using Laravel.', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] },
-      { name: 'Database', description: 'I give api connections both of phase and I stored data in MySql', images: ['https://via.placeholder.com/300x200', 'https://via.placeholder.com/300x200'] }
+      { name: 'Backend', description: 'I develop backend using Laravel.', images: [moonba1,moonba2,moonba3,moonba4,moonba5,moonba6,moonba7,moonba8,moonba9,moonba10,moonba11,moonba12,moonba13,moonba14] },
+      { name: 'Database', description: 'I give api connections both of phase and I stored data in MySql', images: [moonit1,moonit2,moonba1,moonba6,moonba10,moonit4] }
     ]
   },
   {
