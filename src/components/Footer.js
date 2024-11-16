@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, IconButton, Grid, Link } from '@mui/material';
+import { Box, Typography, IconButton, Grid} from '@mui/material';
 import { Facebook, Twitter, LinkedIn, Instagram } from '@mui/icons-material';
 
 const Footer = () => {

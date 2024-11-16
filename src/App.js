@@ -41,6 +41,7 @@ const App = () => {
           <Route path="/services/:id" element={<ServiceDetails />} />
           <Route path="/services/" element={<MainContent />} />
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
+          <Route path="/portfolio/" element={<MainContent />} />
 
         </Routes>
       </Box>
