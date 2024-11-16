@@ -9,7 +9,7 @@ import {
   Breadcrumbs,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
+import { Home as HomeIcon} from '@mui/icons-material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import '../assets/css/ServiceDetails.css';

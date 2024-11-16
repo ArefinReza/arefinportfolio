@@ -84,7 +84,7 @@ const Footer = () => {
                         Email: arefinsaim@gmail.com
                     </Typography>
                     <Typography variant="body2" gutterBottom>
-                        Address: Dhaka, 1230, Bangladesh
+                        Address: Dhaka, 1229, Bangladesh
                     </Typography>
 
                     {/* Social Media Icons */}

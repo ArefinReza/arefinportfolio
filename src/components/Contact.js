@@ -34,7 +34,7 @@ const Contact = () => {
           <LocationOnIcon 
             sx={{ color: '#4285F4', mr: 1, transition: 'color 0.3s', '&:hover': { color: '#1E88E5' } }} 
           />
-          <Typography variant="body1">1230 Khilkhet, Dhaka, Bangladesh</Typography>
+          <Typography variant="body1">1229 Khilkhet, Dhaka, Bangladesh</Typography>
         </Box>
         
         {/* Map */}

@@ -38,7 +38,7 @@ function Portfolio() {
   return (
     <Box className="portfolioSection" sx={{ padding: '20px' }}>
       <Typography variant="h3" align="center" gutterBottom sx={{color:'#003049'}}>
-        Some of My Portfolio
+        Some of My Portfolios
       </Typography>
       <Typography variant="subtitle1" align="center" sx={{ marginBottom: '20px' }}>
         Here are a few projects that I’ve worked on recently. Use the filter options to browse.
