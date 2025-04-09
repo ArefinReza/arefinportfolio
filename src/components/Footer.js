@@ -104,7 +104,7 @@ const Footer = () => {
                 }}
             >
                 <Typography variant="body2">
-                    © {new Date().getFullYear()} Arefin Reza. All rights reserved.
+                    © 2024 - {new Date().getFullYear()} Arefin Reza. All rights reserved.
                 </Typography>
             </Box>
         </Box>

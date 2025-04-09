@@ -1,173 +1,272 @@
 import React, { useState } from 'react';
-import { Box, Avatar, Typography, List, ListItem, ListItemIcon, ListItemText, IconButton, Drawer } from '@mui/material';
-import { Home, Person, BusinessCenter, Folder, Work, ContactMail, Menu } from '@mui/icons-material';
-import { Facebook, Twitter, LinkedIn, Instagram, GitHub } from '@mui/icons-material';
+import {
+  Box,
+  Avatar,
+  Typography,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  IconButton,
+  Drawer,
+} from '@mui/material';
+import {
+  Home,
+  Person,
+  BusinessCenter,
+  Folder,
+  Work,
+  ContactMail,
+} from '@mui/icons-material';
+import {
+  Facebook,
+  Twitter,
+  LinkedIn,
+  Instagram,
+  GitHub,
+} from '@mui/icons-material';
 import { Link } from 'react-scroll';
-import profile from '../assets/image/profile.jpg'
+import profile from '../assets/image/profile.jpg';
+import { styled } from '@mui/system';
+
+const Hamburger = styled('div')(({ theme }) => ({
+  width: 24,
+  height: 16,
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  cursor: 'pointer',
+  '&::before, &::after, & span': {
+    content: '""',
+    position: 'absolute',
+    height: 2,
+    width: 24,
+    backgroundColor: 'yellow',
+    transition: '0.3s',
+  },
+  '&::before': {
+    top: 0,
+  },
+  '& span': {
+    top: '50%',
+    transform: 'translateY(-50%)',
+  },
+  '&::after': {
+    bottom: 0,
+  },
+}));
+
 const Sidebar = () => {
-  const [open, setOpen] = useState(false); // State for sidebar visibility
+  const [open, setOpen] = useState(false);
 
   const toggleDrawer = (isOpen) => () => {
     setOpen(isOpen);
   };
 
+  const socialIcons = (
+    <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mb: 3, flexWrap: 'wrap' }}>
+      <IconButton
+        href="https://www.facebook.com/arefin.reza.saim"
+        target="_blank"
+        color="inherit"
+        sx={{
+          animation: 'bounce 2s infinite ease-in-out',
+          '@keyframes bounce': {
+            '0%, 100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-5px)' },
+          },
+        }}
+      >
+        <Facebook />
+      </IconButton>
+
+      <IconButton
+        color="inherit"
+        sx={{
+          animation: 'flap 2s infinite ease-in-out',
+          '@keyframes flap': {
+            '0%, 100%': { transform: 'rotate(0deg)' },
+            '50%': { transform: 'rotate(15deg)' },
+          },
+        }}
+      >
+        <Twitter />
+      </IconButton>
+
+      <IconButton
+        href="https://www.linkedin.com/in/arefinreza46/"
+        target="_blank"
+        color="inherit"
+        sx={{
+          animation: 'pulse 2s infinite',
+          '@keyframes pulse': {
+            '0%, 100%': { transform: 'scale(1)' },
+            '50%': { transform: 'scale(1.1)' },
+          },
+        }}
+      >
+        <LinkedIn />
+      </IconButton>
+
+      <IconButton
+        href="https://www.instagram.com/arefinsaim/"
+        target="_blank"
+        color="inherit"
+        sx={{
+          animation: 'rotate 3s infinite linear',
+          '@keyframes rotate': {
+            '0%': { transform: 'rotate(0deg)' },
+            '100%': { transform: 'rotate(360deg)' },
+          },
+        }}
+      >
+        <Instagram />
+      </IconButton>
+
+      <IconButton
+        href="https://github.com/ArefinReza"
+        target="_blank"
+        color="inherit"
+        sx={{
+          animation: 'pop 2s infinite ease-in-out',
+          '@keyframes pop': {
+            '0%, 100%': { transform: 'scale(1)' },
+            '50%': { transform: 'scale(1.2)' },
+          },
+        }}
+      >
+        <GitHub />
+      </IconButton>
+    </Box>
+  );
+
+  const navItems = [
+    { label: 'Home', icon: <Home />, to: 'home' },
+    { label: 'About', icon: <Person />, to: 'about' },
+    { label: 'Skills', icon: <Person />, to: 'skills' },
+    { label: 'Resume', icon: <BusinessCenter />, to: 'resume' },
+    { label: 'Portfolio', icon: <Folder />, to: 'portfolio' },
+    { label: 'Services', icon: <Work />, to: 'services' },
+    { label: 'Contact', icon: <ContactMail />, to: 'contact' },
+  ];
+
   const sidebarContent = (
     <Box
       sx={{
-        width: { xs: '100vw', sm: '300px' },
+        width: '100%',
+        maxWidth: { xs: '100vw', sm: '300px' },
         bgcolor: '#003049',
         color: 'white',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'left',
-        padding: '20px',
+        alignItems: 'center',
+        padding: 2,
         height: '100vh',
+        boxSizing: 'border-box',
       }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
     >
-      <Avatar
-        src={profile}
-        sx={{
-          width: '120px',
-          height: '120px',
-          borderRadius: '50%',
-          alignItems: 'center',
-          mb: 3,
-          margin: '0 auto',
-          marginTop: 3,
-          marginBottom: 2,
-        }}
-      />
-      <Typography variant="h5" fontWeight="bold"
-        sx={{
-
-          margin: '0 auto',
-          marginTop: 2,
-          marginBottom: 2,
-        }}>
+      <Avatar src={profile} sx={{ width: 100, height: 100, mb: 2 }} />
+      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, textAlign: 'center' }}>
         MD. Arefin Reza
       </Typography>
-
-      <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', my: 2 }}>
-        <IconButton href='https://www.facebook.com/arefin.reza.saim' target='_blank'
-          color="inherit"
-          sx={{
-            animation: 'bounce 2s infinite ease-in-out',
-            '@keyframes bounce': {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-5px)' },
-            }
-          }}
-        >
-          <Facebook />
-        </IconButton>
-
-        <IconButton
-          color="inherit"
-          sx={{
-            animation: 'flap 2s infinite ease-in-out',
-            '@keyframes flap': {
-              '0%, 100%': { transform: 'rotate(0deg)' },
-              '50%': { transform: 'rotate(15deg)' },
-            }
-          }}
-        >
-          <Twitter />
-        </IconButton>
-
-        <IconButton href='https://www.linkedin.com/in/arefinreza46/' target='_blank'
-          color="inherit"
-          sx={{
-            animation: 'pulse 2s infinite',
-            '@keyframes pulse': {
-              '0%, 100%': { transform: 'scale(1)' },
-              '50%': { transform: 'scale(1.1)' },
-            }
-          }}
-        >
-          <LinkedIn />
-        </IconButton>
-
-        <IconButton href='https://www.instagram.com/arefinsaim/' target='_blank'
-          color="inherit"
-          sx={{
-            animation: 'rotate 3s infinite linear',
-            '@keyframes rotate': {
-              '0%': { transform: 'rotate(0deg)' },
-              '100%': { transform: 'rotate(360deg)' },
-            }
-          }}
-        >
-          <Instagram />
-        </IconButton>
-
-        <IconButton href='https://github.com/ArefinReza' target='_blank'
-          color="inherit"
-          sx={{
-            animation: 'pop 2s infinite ease-in-out',
-            '@keyframes pop': {
-              '0%, 100%': { transform: 'scale(1)' },
-              '50%': { transform: 'scale(1.2)' },
-            }
-          }}
-        >
-          <GitHub />
-        </IconButton>
-      </Box>
-
+      {socialIcons}
       <List sx={{ width: '100%' }}>
-        <ListItem button component={Link} to="home" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><Home sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button component={Link} to="about" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button component={Link} to="skills" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><Person sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Skills" />
-        </ListItem>
-        <ListItem button component={Link} to="resume" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><BusinessCenter sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Resume" />
-        </ListItem>
-        <ListItem button component={Link} to="portfolio" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><Folder sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Portfolio" />
-        </ListItem>
-        <ListItem button component={Link} to="services" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><Work sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Services" />
-        </ListItem>
-        <ListItem button component={Link} to="contact" spy smooth offset={-50} activeClass="active">
-          <ListItemIcon sx={{ justifyContent: 'center' }}><ContactMail sx={{ color: '#FFD700' }} /></ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItem>
+        {navItems.map((item) => (
+          <ListItem
+            button
+            component={Link}
+            to={item.to}
+            spy
+            smooth
+            offset={-50}
+            duration={500}
+            activeClass="active"
+            key={item.label}
+            sx={{ px: 2, cursor: 'pointer' }}
+          >
+            <ListItemIcon sx={{ minWidth: 36, color: '#FFD700' }}>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText primary={item.label} />
+          </ListItem>
+        ))}
       </List>
     </Box>
   );
 
   return (
     <Box>
-      {/* Hamburger Menu Icon for Mobile View */}
-      <IconButton
-        color="inherit"
-        edge="start"
+      {/* Custom Hamburger Icon - top-right */}
+      <Box
         onClick={toggleDrawer(true)}
-        sx={{ display: { xs: 'inline', sm: 'none' }, position: 'fixed', top: 10, right: 10 }}
+        sx={{
+          display: { xs: 'flex', sm: 'none' },
+          position: 'fixed',
+          top: 12,
+          right: 16,
+          zIndex: 1301,
+          cursor: 'pointer',
+        }}
       >
-        <Menu />
-      </IconButton>
-
-      {/* Permanent Sidebar on Desktop */}
-      <Box sx={{ display: { xs: 'none', sm: 'block' }, position: 'fixed', left: 0 }}>
-        {sidebarContent}
+        <Hamburger>
+          <span />
+        </Hamburger>
       </Box>
 
-      {/* Drawer Sidebar for Mobile */}
+      {/* Desktop Sidebar */}
+      <Box sx={{ display: { xs: 'none', sm: 'block' }, position: 'fixed', left: 0, top: 0 }}>
+        <Box
+          sx={{
+            width: '300px',
+            bgcolor: '#003049',
+            color: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'left',
+            padding: '20px',
+            height: '100vh',
+          }}
+        >
+          <Avatar
+            src={profile}
+            sx={{
+              width: '120px',
+              height: '120px',
+              borderRadius: '50%',
+              margin: '0 auto',
+              mt: 3,
+              mb: 2,
+            }}
+          />
+          <Typography variant="h5" fontWeight="bold" sx={{ textAlign: 'center', mb: 2 }}>
+            MD. Arefin Reza
+          </Typography>
+          {socialIcons}
+          <List sx={{ width: '100%', cursor: 'pointer' }}>
+            {navItems.map((item) => (
+              <ListItem
+                button
+                component={Link}
+                to={item.to}
+                spy
+                smooth
+                offset={-50}
+                duration={500}
+                activeClass="active"
+                key={item.label}
+              >
+                <ListItemIcon sx={{ justifyContent: 'center' }}>
+                  {React.cloneElement(item.icon, { sx: { color: '#FFD700' } })}
+                </ListItemIcon>
+                <ListItemText primary={item.label} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Box>
+
+      
       <Drawer
         anchor="right"
         open={open}
@@ -175,8 +274,9 @@ const Sidebar = () => {
         sx={{
           display: { xs: 'block', sm: 'none' },
           '& .MuiDrawer-paper': {
-            width: '75vw', // Set the drawer width to 75% of viewport width
-            maxWidth: '300px', // Maximum width for larger screens
+            width: '80vw',
+            maxWidth: '300px',
+            bgcolor: '#003049',
           },
         }}
       >

@@ -65,6 +65,47 @@ import gena2 from '../assets/image/portfolioDetails/gena2.png'
 import gena3 from '../assets/image/portfolioDetails/gena3.png'
 import gena4 from '../assets/image/portfolioDetails/gena4.png'
 import gena5 from '../assets/image/portfolioDetails/gena5.png'
+
+import master1 from '../assets/image/portfolioDetails/master1.png'
+import master2 from '../assets/image/portfolioDetails/master2.png'
+import master3 from '../assets/image/portfolioDetails/master3.png'
+import master4 from '../assets/image/portfolioDetails/master4.png'
+import master5 from '../assets/image/portfolioDetails/master5.png'
+import masteradmin1 from '../assets/image/portfolioDetails/masteradmin1.png'
+import masteradmin2 from '../assets/image/portfolioDetails/masteradmin2.png'
+import masteradmin3 from '../assets/image/portfolioDetails/masteradmin3.png'
+import masteradmin4 from '../assets/image/portfolioDetails/masteradmin4.png'
+import mastershop1 from '../assets/image/portfolioDetails/mastershop1.png'
+import mastershop2 from '../assets/image/portfolioDetails/mastershop2.png'
+
+
+import sorkar1 from '../assets/image/portfolioDetails/sorkar1.png'
+import sorkar2 from '../assets/image/portfolioDetails/sorkar2.png'
+import sorkar3 from '../assets/image/portfolioDetails/sorkar3.png'
+import sorkar4 from '../assets/image/portfolioDetails/sorkar4.png'
+import sorkar5 from '../assets/image/portfolioDetails/sorkar5.png'
+import sorkar6 from '../assets/image/portfolioDetails/sorkar6.png'
+import sorakaradmin1 from '../assets/image/portfolioDetails/sorkaradmin1.png'
+import sorakaradmin2 from '../assets/image/portfolioDetails/sorkaradmin2.png'
+import sorakaradmin3 from '../assets/image/portfolioDetails/sorkaradmin3.png'
+import sorakaradmin4 from '../assets/image/portfolioDetails/sorkaradmin4.png'
+import sorakaradmin5 from '../assets/image/portfolioDetails/sorkaradmin5.png'
+import sorakaradmin6 from '../assets/image/portfolioDetails/sorkaradmin6.png'
+import sorakaradmin11 from '../assets/image/portfolioDetails/sarkkaradmin11.png'
+
+import medical1 from '../assets/image/portfolioDetails/medical11.png'
+import medical2 from '../assets/image/portfolioDetails/medical1.png'
+import medical3 from '../assets/image/portfolioDetails/medical2.png'
+import medical4 from '../assets/image/portfolioDetails/medical3.png'
+import medical5 from '../assets/image/portfolioDetails/medical5.png'
+
+import realstate1 from '../assets/image/portfolioDetails/realstate1.png'
+import realstate2 from '../assets/image/portfolioDetails/realstate2.png'
+import realstate3 from '../assets/image/portfolioDetails/realstate3.png'
+import realstate4 from '../assets/image/portfolioDetails/realstate4.png'
+import realstate5 from '../assets/image/portfolioDetails/realstate6.png'
+import realstate6 from '../assets/image/portfolioDetails/realstate7.png'
+
 const services = [
     {
       id: 1,
@@ -76,7 +117,7 @@ const services = [
           name: 'Frontend',
           description: 'Creating visually appealing, interactive, and responsive user interfaces using modern frameworks such as React, Vue, and Angular. We prioritize both aesthetics and functionality to ensure a seamless user experience.',
           images: [
-            moonit1, moonit2, moonit3, mt1, mt2, mt3, mt4, mt5, gen1, gen2, gen3, gen4,
+            sorkar1,sorkar2,sorakaradmin11, mt1, mt2, mt3, mt4, mt5, gen1, gen2, gen3, gen4,
           ]
         },
         {
@@ -252,16 +293,17 @@ const services = [
 const portfolioData = [
   {
     id: '1',
-    title: 'Digital Marketing Agency Portfolio',
+    title: 'IT Agency Portfolio',
     category:'Portfolio',
-    description: 'I created many Portfolio site using Laravel and React',
-     imageUrl: moonit1,
+    description: 'I created many Portfolio site using Laravel 11 and ReactJs',
+     imageUrl: sorkar1,
     categories: [
-      { name: 'Frontend', description: 'I used React for Frontend.', images: [moonit2, moonit3,moonit4,moonit5,moonit6,moonit7,moonit8,moonit9,moonit10] },
-      { name: 'Backend', description: 'I develop backend using Laravel.', images: [moonba1,moonba2,moonba3,moonba4,moonba5,moonba6,moonba7,moonba8,moonba9,moonba10,moonba11,moonba12,moonba13,moonba14] },
-      { name: 'Database', description: 'I give api connections both of phase and I stored data in MySql', images: [moonit1,moonit2,moonba1,moonba6,moonba10,moonit4] }
+      { name: 'Frontend', description: 'I used React for Frontend.', images: [sorkar1, sorkar2, sorkar3, sorkar4, sorkar5, sorkar6] },
+      { name: 'Backend', description: 'I develop backend using Laravel.', images: [sorakaradmin11,sorakaradmin1, sorakaradmin2, sorakaradmin3, sorakaradmin4, sorakaradmin5, sorakaradmin6] },
+      { name: 'Overview', description: 'I give api connections both of phase and I stored data in MySql', images: [sorakaradmin2,sorkar1, sorkar2, sorkar4,sorakaradmin4] }
     ]
   },
+  
   {
     id: '2',
     title: 'Coffee Shop Digital Menu Cart',
@@ -286,6 +328,55 @@ const portfolioData = [
       { name: 'Database', description: 'I give api connections both of phase and I stored data in MySql.', images: [gen1,gen10,gen4,gena3,gena4] }
     ]
   },
+  {
+    id: '4',
+    title: 'Master Helmet & Decoretion',
+    category:'ECommerce',
+    description: 'I developed ECommerce website named Gen-z Bazar. A full complete website with authentications.',
+     imageUrl: master1,
+    categories: [
+      { name: 'Frontend', description: 'I used Raw CSSS and BootStrap for Frontend.', images: [master1,master2,master3,master4,master5] },
+      { name: 'Backend', description: 'I develop backend using PhP (OOP). A custome Admin panel with Bootstrap.', images: [masteradmin1,masteradmin2,masteradmin3,masteradmin4] },
+      { name: 'Overview', description: 'If you enter data in one place, the data goes everywhere. Fully dynamic and hassle-free website.', images: [master1,masteradmin1,mastershop1,master4,masteradmin2] },
+      { name: 'Shop Managment', description: 'This is store management. If you enter data in one place, the data goes everywhere. Fully dynamic and hassle-free websites.', images: [mastershop1,mastershop2] }
+    ]
+  },
+  {
+    id: '5',
+    title: 'Digital Marketing Agency Portfolio',
+    category:'Portfolio',
+    description: 'I created many Portfolio site using Laravel and React',
+     imageUrl: moonit1,
+    categories: [
+      { name: 'Frontend', description: 'I used React for Frontend.', images: [moonit2, moonit3,moonit4,moonit5,moonit6,moonit7,moonit8,moonit9,moonit10] },
+      { name: 'Backend', description: 'I develop backend using Laravel.', images: [moonba1,moonba2,moonba3,moonba4,moonba5,moonba6,moonba7,moonba8,moonba9,moonba10,moonba11,moonba12,moonba13,moonba14] },
+      { name: 'Database', description: 'I give api connections both of phase and I stored data in MySql', images: [moonit1,moonit2,moonba1,moonba6,moonba10,moonit4] }
+    ]
+  },
+  {
+    id: '6',
+    title: 'E-Hospital Template',
+    category:'Template',
+    description: 'This is a template for E-Hospital. It has some extensive ideas. Full Responsiive Template built with HTML5 and CSS',
+     imageUrl: medical1,
+    categories: [
+      { name: 'UI', description: 'This is a template for E-Hospital. I used HTML and CSS3', images: [medical1, medical2, medical3, medical4, medical5] },
+      { name: 'UX', description: 'Full Ressponsive template makes you feel easy', images: [medical1, medical2, medical3, medical4, medical5] },
+      { name: 'Fetchers', description: 'I give here some extensive fetchers like Test calculator where you can know much you have to pay.', images: [medical1, medical2, medical3, medical4, medical5] }
+    ]
+  },
+  {
+    id: '7',
+    title: 'Finance / Investment Management Template',
+    category:'Template',
+    description: 'This is a template for an investment management firm. It has some extensive ideas. Full Responsiive Template built with HTML5 and CSS',
+     imageUrl: realstate1,
+    categories: [
+      { name: 'UI', description: 'This is a template for an investment management firm. I used HTML and CSS3', images: [realstate1, realstate2, realstate3, realstate4, realstate5, realstate6] },
+      { name: 'UX', description: 'Full Ressponsive template makes you feel easy', images: [realstate1, realstate2, realstate3, realstate4, realstate5, realstate6] },
+      { name: 'Fetchers', description: 'I give here some extensive fetchers like Test calculator where you can know much you have to pay.', images: [realstate1, realstate2, realstate3, realstate4, realstate5, realstate6] }
+    ]
+  },
   // More services with similar structures
 ];
 
@@ -300,7 +391,7 @@ const educationData = [
     description: 'Graduated with honors in Computer Science.',
   },
   {
-    degree: 'H.S.C',
+    degree: 'Higher Secondary Certificate',
     institution: 'Rohanpur Gov. Yousuf Ali College',
     year: '2016 - 2020',
     description: 'Depertment of Science',
@@ -328,6 +419,25 @@ export {experienceData};
 
 const certificationData = [
   {
+    title: 'EDGE Project – Laravel',
+    company: 'Uttara University',
+    year: '2024',
+    description: '6-month training program focused on Laravel development.',
+  },
+  {
+    title: 'RPL Level 3 WDDFF',
+    company: 'European IT, Mirpur 10',
+    year: '2024',
+    description: 'Certificate exam related to Web Design & Development Framework Fundamentals.',
+  },
+  {
+    title: 'MS Office',
+    company: 'Karigori Computer Proshikkhan Kendro',
+    year: '2017',
+    description: 'I Did The 6 Month Course Based On MS Office Applications.',
+  },
+
+  {
     title: 'Python Basic',
     company: 'Hacker Rank',
     year: '2024',
@@ -345,12 +455,9 @@ const certificationData = [
     year: '2023',
     description: 'Basic of Ethical Hacking',
   },
-  {
-    title: 'MS Office',
-    company: 'Karigori Computer Proshikkhan Kendro',
-    year: '2017',
-    description: 'I Did The 6 Month Course Based On MS Office Applications.',
-  },
+  
+ 
+  
 ];
 
 export {certificationData}

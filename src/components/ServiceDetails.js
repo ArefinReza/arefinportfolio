@@ -9,7 +9,7 @@ import {
   Breadcrumbs,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Home as HomeIcon, ArrowForwardIos as ArrowIcon } from '@mui/icons-material';
+import { Home as HomeIcon } from '@mui/icons-material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Carousel from 'react-material-ui-carousel';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
@@ -152,7 +152,6 @@ const ServiceDetails = () => {
                         zIndex: 1,
                         '&:hover': {
                           color: '#FFD700',},
-                      py: 1.5,
                     }} variant="h5" color="#FFD700" fontWeight="bold" gutterBottom>
                       {plan.price}
                     </Typography>

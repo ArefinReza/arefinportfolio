@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
-import { Box, Typography, Grid, IconButton, Modal, Fade } from '@mui/material';
-import { OpenInFull, Info } from '@mui/icons-material';
+import React, { useState, useEffect } from 'react';
+import { Box, Typography, Grid } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import '../assets/css/portfolio.css';
 import { portfolioData } from './Api';
-
-const categories = ['All', 'ECommerce', 'Portfolio', 'Apps', 'Photo Design', 'Templates'];
 
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [filteredData, setFilteredData] = useState(portfolioData);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [categories, setCategories] = useState([]);
   const isMobile = useMediaQuery('(max-width:600px)');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
-  // Handle filtering by category
+  useEffect(() => {
+    const uniqueCategories = Array.from(
+      new Set(portfolioData.map(item => item.category))
+    );
+    setCategories(['All', ...uniqueCategories]);
+  }, []);
+
   const handleFilter = (category) => {
     setActiveFilter(category);
     setFilteredData(
@@ -25,21 +26,8 @@ function Portfolio() {
     );
   };
 
-  // Open image modal
-  const openImageModal = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-  };
-
-  // Close image modal
-  const closeImageModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
-
-  // Handle portfolio item click
   const handlePortfolioClick = (id) => {
-    navigate(`/portfolio/${id}`); // Navigate to the portfolio details page
+    navigate(`/portfolio/${id}`);
   };
 
   return (
@@ -48,7 +36,7 @@ function Portfolio() {
         Some of My Portfolios
       </Typography>
       <Typography variant="subtitle1" align="center" sx={{ marginBottom: '20px' }}>
-        Here are a few projects that I’ve worked on recently. Use the filter options to browse.
+        Here are a few projects that I've worked on recently. Use the filter options to browse.
       </Typography>
 
       {/* Filter options */}
@@ -86,11 +74,26 @@ function Portfolio() {
           <Grid item xs={12} sm={6} md={4} key={item.id} className="portfolioItem">
             <Box
               className="portfolioImageWrapper"
-              sx={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}
+              onClick={() => handlePortfolioClick(item.id)}
+              sx={{
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                '&:hover .portfolioHoverOverlay': {
+                  opacity: 1
+                },
+                '&:hover .viewDetailsText': {
+                  transform: 'translateY(1.1)'
+                }
+              }}
             >
-              <img src={item.imageUrl} alt={item.title} className="portfolioImage" />
-
-              {/* Hover overlay with icons */}
+              <img 
+                src={item.imageUrl} 
+                alt={item.title} 
+                className="portfolioImage"
+                style={{ width: '100%' }}
+              />
               <Box
                 className="portfolioHoverOverlay"
                 sx={{
@@ -99,53 +102,35 @@ function Portfolio() {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                  backgroundColor: 'rgba(0, 51, 102, 0.8)',
                   opacity: 0,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: 3,
-                  transition: 'opacity 0.3s',
-                  '&:hover': { opacity: 1 },
+                  transition: 'opacity 0.4s ease',
                 }}
               >
-                <IconButton
-                  onClick={() => openImageModal(item.imageUrl)}
-                  sx={{ color: '#fff', backgroundColor: '#1976d2', borderRadius: '50%' }}
+                <Typography
+                  className="viewDetailsText"
+                  variant="h5"
+                  sx={{
+                    color: '#FFD700',
+                    fontWeight: 'bold',
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                    transform: 'translateY(20px)',
+                    transition: 'transform 0.3s ease 0.1s',
+                    '&:hover': {
+                      transform: 'translateY(0)'
+                    }
+                  }}
                 >
-                  <OpenInFull fontSize="small" />
-                </IconButton>
-                <IconButton
-                  onClick={() => handlePortfolioClick(item.id)}
-                  sx={{ color: '#fff', backgroundColor: '#1976d2', borderRadius: '50%' }}
-                >
-                  <Info fontSize="small" />
-                </IconButton>
+                  View Details →
+                </Typography>
               </Box>
             </Box>
           </Grid>
         ))}
       </Grid>
-
-      {/* Image Modal */}
-      <Modal open={isModalOpen} onClose={closeImageModal}>
-        <Fade in={isModalOpen}>
-          <Box
-            className="modalContent"
-            sx={{
-              width: '90%',
-              maxWidth: '700px',
-              margin: 'auto',
-              mt: 4,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <img src={selectedImage} alt="Selected Portfolio" className="modalImage" />
-          </Box>
-        </Fade>
-      </Modal>
     </Box>
   );
 }

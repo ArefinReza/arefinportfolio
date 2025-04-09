@@ -45,4 +45,14 @@
     max-height: 80vh;
     border-radius: 10px;
   }
-  
+  .portfolioImage {
+  transition: opacity 0.3s ease;
+}
+
+.portfolioHoverOverlay {
+  transition: opacity 0.4s ease;
+}
+
+.viewDetailsText {
+  transition: transform 0.3s ease 0.1s;
+}
