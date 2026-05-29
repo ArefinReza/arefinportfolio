@@ -385,16 +385,22 @@ export {portfolioData};
 
 const educationData = [
   {
-    degree: 'Bachelor of Computer Science',
+    degree: 'B.Sc. in Computer Science & Engineering',
     institution: 'Uttara University',
-    year: '2021 - 2024',
-    description: 'Graduated with honors in Computer Science.',
+    year: '2021 - 2025',
+    description: 'Result: CGPA 3.57 out of 4 (4-Year program). Thesis Topic: DDoS Attack Detection and IP Blocking using HDBSCAN, DBSCAN, GMM, And Isolation Forest.',
   },
   {
-    degree: 'Higher Secondary Certificate',
-    institution: 'Rohanpur Gov. Yousuf Ali College',
-    year: '2016 - 2020',
-    description: 'Depertment of Science',
+    degree: 'Higher Secondary Certificate (HSC) - Science',
+    institution: 'Rohanpur Yusuf Ali Govt. College (Rajshahi Board)',
+    year: '2018 - 2020',
+    description: 'Result: GPA 3.25 out of 5 (2-Year program).',
+  },
+  {
+    degree: 'Secondary School Certificate (SSC) - Science',
+    institution: 'Bongpur High School (Rajshahi Board)',
+    year: '2013 - 2015',
+    description: 'Result: GPA 4.61 out of 5 (2-Year program).',
   },
 ];
 export {educationData};
@@ -402,8 +408,14 @@ export {educationData};
 
 const experienceData = [
   {
+    title: 'Web Developer',
+    company: 'Webleez Limited (Uttara 12, Dhaka)',
+    year: '2025 Jan - Present',
+    description: 'Core responsibilities: Web Template Design, Frontend Development, Web hosting on the server, Adding features to the backend, Bug Fixing, and Client Handling.',
+  },
+  {
     title: 'Frontend Developer',
-    company: 'Selfself-Independent',
+    company: 'Self-Independent',
     year: '2022 - Present',
     description: 'Developed responsive user interfaces with React and TailwindCSS, BootStrap, MUI.',
   },
@@ -411,7 +423,7 @@ const experienceData = [
     title: 'Full Stack Developer',
     company: 'Self-Independent',
     year: '2023 - Present',
-    description: 'Developed Full Stack Web with React and Laravel. Raw HTML5, CSS and PHP as well',
+    description: 'Developed Full Stack Web with React and Laravel. Raw HTML5, CSS and PHP as well.',
   },
 ];
 export {experienceData};
@@ -419,45 +431,47 @@ export {experienceData};
 
 const certificationData = [
   {
-    title: 'EDGE Project – Laravel',
-    company: 'Uttara University',
+    title: 'EDGE Project - Laravel',
+    company: 'Jagannath University',
     year: '2024',
-    description: '6-month training program focused on Laravel development.',
+    description: 'Training program focused on Laravel development.',
   },
   {
-    title: 'RPL Level 3 WDDFF',
+    title: 'WDDFF Certificate Exam (RPL Level 3)',
     company: 'European IT, Mirpur 10',
     year: '2024',
-    description: 'Certificate exam related to Web Design & Development Framework Fundamentals.',
+    description: '6-Month program on Web Design & Development Framework Fundamentals.',
   },
   {
-    title: 'MS Office',
-    company: 'Karigori Computer Proshikkhan Kendro',
-    year: '2017',
-    description: 'I Did The 6 Month Course Based On MS Office Applications.',
+    title: 'Full Stack Web Development (MERN/MySQL)',
+    company: 'Programming Hero',
+    year: '2022',
+    description: '6-Month comprehensive training covering MySQL, Express JS, React JS, and Node JS.',
   },
-
+  {
+    title: 'Database Programming',
+    company: 'Bangladesh Technical Education Board, Dhaka',
+    year: '2018',
+    description: '6-Month course specializing in Database Programming and Excel.',
+  },
+  {
+    title: 'Microsoft Office Applications',
+    company: 'Karigori Computer Proshikkhan Kendro, Rohanpur',
+    year: '2017',
+    description: '6-Month course in Microsoft Word, Excel, PowerPoint, OneNote, and Outlook.',
+  },
   {
     title: 'Python Basic',
     company: 'Hacker Rank',
     year: '2024',
-    description: 'A Python Basic Certification',
-  },
-  {
-    title: 'Database Programming',
-    company: 'Bangladesh Technical Education Board Dhaka',
-    year: '2018',
-    description: 'I Did The 6 Month Course Based On Excel.',
+    description: 'A Python Basic Certification.',
   },
   {
     title: 'Ethical Hacking',
     company: 'Google Certified',
     year: '2023',
-    description: 'Basic of Ethical Hacking',
+    description: 'Basic of Ethical Hacking.',
   },
-  
- 
-  
 ];
 
 export {certificationData}
@@ -466,13 +480,13 @@ const coursesData = [
     title: 'Full Stack Web Development',
     company: 'Programming Hero',
     year: '2022',
-    description: 'I completed it in 6 months. It is basically MERN Stack web development.',
+    description: 'MySQL, Express JS, React JS, and Node JS training.',
   },
   {
     title: 'Cybersecurity',
     company: 'Udemy',
     year: '2023',
-    description: 'Basic Of CyberSecurity',
+    description: 'Basic Of CyberSecurity.',
   },
 ];
 export{coursesData};

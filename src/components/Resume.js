@@ -5,7 +5,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import '../assets/css/resume.css';
 
-import {educationData, certificationData, experienceData, coursesData} from './Api'
+import { educationData, certificationData, experienceData, coursesData } from './Api'
 
 function Resume() {
   const [isInView, setIsInView] = useState(false);
@@ -167,7 +167,7 @@ function Resume() {
         <Grid item xs={12} display="flex" justifyContent="center">
           <Button
             component="a"
-            href="https://drive.google.com/file/d/1bCEjxJ160JGbEg9S1P7OBYoAAAIL9t5M/view?usp=sharing"
+            href="https://drive.google.com/file/d/1t1PxhQjMfpdoVhNMBlCnVT5vV5w7b3cm/view?usp=sharing"
             target="_blank"
             variant="contained"
             sx={{

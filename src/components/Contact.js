@@ -13,12 +13,12 @@ const Contact = () => {
           Contact Info
         </Typography>
         
-        {/* WhatsApp */}
+        {/* WhatsApp / Mobile */}
         <Box display="flex" alignItems="center" mb={2} paddingLeft={2}>
           <WhatsAppIcon 
             sx={{ color: 'green', mr: 1, transition: 'color 0.3s', '&:hover': { color: '#25D366' } }} 
           />
-          <Typography variant="body1">+880 1819 222 446</Typography>
+          <Typography variant="body1">01751030446 / 01819222446</Typography>
         </Box>
         
         {/* Email */}
@@ -26,7 +26,7 @@ const Contact = () => {
           <EmailIcon 
             sx={{ color: '#d93025', mr: 1, transition: 'color 0.3s', '&:hover': { color: '#FF5722' } }} 
           />
-          <Typography variant="body1">arefinsaim.com</Typography>
+          <Typography variant="body1">arefinsaim@gmail.com</Typography>
         </Box>
         
         {/* Address */}
@@ -34,7 +34,7 @@ const Contact = () => {
           <LocationOnIcon 
             sx={{ color: '#4285F4', mr: 1, transition: 'color 0.3s', '&:hover': { color: '#1E88E5' } }} 
           />
-          <Typography variant="body1">1229 Khilkhet, Dhaka, Bangladesh</Typography>
+          <Typography variant="body1">Khilkhet, Dhaka 1229</Typography>
         </Box>
         
         {/* Map */}

@@ -102,7 +102,7 @@ function About() {
                                             },
                                         }}
                                     />{' '}
-                                    Website: www.arefin.com
+                                    Website: https://arefinreza.netlify.app
                                 </Typography>
                                 <Typography sx={{ display: 'flex', alignItems: 'center' }}>
                                     <FacebookIcon

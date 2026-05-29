@@ -78,7 +78,7 @@ const Footer = () => {
                         Contact Info
                     </Typography>
                     <Typography variant="body2">
-                        Phone: +880 1819 222 446
+                        Phone: 01751030446 / 01819222446
                     </Typography>
                     <Typography variant="body2">
                         Email: arefinsaim@gmail.com
