@@ -1,92 +1,42 @@
 .skillsSection {
-    background-color: #f4f4f9;
-    padding: 40px 20px;
-    border-radius: 8px;
-  }
-  
-  /* .skillsSection h3 {
-    font-size: 2rem;
-    color: #3f51b5;
-    margin-bottom: 20px;
-  } */
-  
-  .skillBox {
-    transition: transform 0.3s ease;
-  }
-  
-  .skillBox:hover {
-    transform: scale(1.05);
-  }
-  
-  .skillIcon {
-    transition: color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skillIcon:hover {
-    color: #ff4081;
-    transform: scale(1.2);
-  }
+  background-color: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  padding: 40px 24px;
+  border-radius: 20px;
+}
 
-  .skillsSection {
-    background-color: #f4f4f9;
-    padding: 40px 20px;
-    border-radius: 8px;
-  }
-/*   
-  .skillsSection h3 {
-    font-size: 2rem;
-    color: #3f51b5;
-    margin-bottom: 20px;
-  } */
-  
-  .skillBox {
-    transition: transform 0.3s ease;
-  }
-  
-  .skillBox:hover {
-    transform: scale(1.05);
-  }
-  
-  .skillIcon {
-    transition: color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skillIcon:hover {
-    color: #ff4081;
-    transform: scale(1.2);
-  }
-  
-  .skillsSection {
-    background-color: #f4f4f9;
-    padding: 40px 20px;
-    border-radius: 8px;
-  }
-  
-  /* .skillsSection h3 {
-    font-size: 2rem;
-    color: #3f51b5;
-    margin-bottom: 20px;
-  } */
-  
-  .skillBox {
-    transition: transform 0.3s ease;
-  }
-  
-  .skillBox:hover {
-    transform: scale(1.05);
-  }
-  
-  .skillIcon {
-    transition: color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skillIcon:hover {
-    color: #ff4081;
-    transform: scale(1.2);
-  }
-  .categoryskill:hover{
-    background-color: rgb(243, 234, 234);
-  }
+.skillBox {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skillBox:hover {
+  transform: translateY(-5px);
+}
+
+.skillIcon {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skillIcon svg {
+  font-size: 2.2rem !important;
+}
+
+.skillIcon:hover {
+  color: var(--color-primary) !important;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
+  transform: scale(1.15) rotate(5deg);
+}
+
+.categoryskill {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.4s ease;
+}
+
+.categoryskill:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: rgba(0, 242, 254, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.05);
+}

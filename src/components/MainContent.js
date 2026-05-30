@@ -5,75 +5,80 @@ import About from './About';
 import Skills from './Skills';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
+import LiveProjects from './LiveProjects';
 import Services from './Services';
 import Contact from './Contact';
 import Home from './Home';
 import Footer from './Footer';
 import Reviews from './Reviews';
+import ScrollReveal from './ScrollReveal';
+
 const MainContent = () => {
   return (
-    <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 0px 300px' }, bgcolor: 'background.default' }}>
+    <Box sx={{ flex: 1, padding: { xs: '0px', sm: '0px 20px 0px 300px' }, bgcolor: 'transparent' }}>
 
       {/* Home Section */}
       <Box id="home">
-        <Typography>
-          <Home/>
-        </Typography>
+        <Home/>
       </Box>
 
       {/* About Section */}
-      <Box id="about" sx={{ my: 4 }}>
-        {/* <Typography variant="h4" fontWeight="bold">About Me</Typography> */}
-        <Typography>
+      <Box id="about" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal-blur-in">
           <About/>
-        </Typography>
+        </ScrollReveal>
       </Box>
 
       {/* Skills Sections  */}
-      <Box id="skills" sx={{ my: 4 }}>
-        {/* <Typography variant="h4" fontWeight="bold">About Me</Typography> */}
-        <Typography>
+      <Box id="skills" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal-zoom-in">
           <Skills/>
-        </Typography>
+        </ScrollReveal>
       </Box>
 
       {/* Resume Section */}
-      <Box id="resume" sx={{ my: 4 }}>
-        <Typography>
+      <Box id="resume" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal">
           <Resume/>
-        </Typography>
+        </ScrollReveal>
       </Box>
 
       {/* Portfolio Section */}
-      <Box id="portfolio" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">
-        <Portfolio/>
-        </Typography>
-        
+      <Box id="portfolio" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal">
+          <Portfolio/>
+        </ScrollReveal>
+      </Box>
+
+      {/* Live Projects Section */}
+      <Box id="live-projects" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal">
+          <LiveProjects/>
+        </ScrollReveal>
       </Box>
 
       {/* Services Section */}
-      <Box id="services" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">
+      <Box id="services" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal-zoom-in">
           <Services/>
-          </Typography>
-        
+        </ScrollReveal>
       </Box>
-      <Box id="footer" >
-        <Typography variant="h4" fontWeight="bold">
+
+      <Box id="reviews" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal">
           <Reviews/>
-        </Typography>
+        </ScrollReveal>
       </Box>
+
       {/* Contact Section */}
-      <Box id="contact" sx={{ my: 4 }}>
-        <Typography variant="h4" fontWeight="bold">
+      <Box id="contact" sx={{ my: 8 }}>
+        <ScrollReveal variant="reveal-blur-in">
           <Contact/>
-        </Typography>
+        </ScrollReveal>
       </Box>
-      <Box id="footer" >
-        <Typography variant="h4" fontWeight="bold">
-          <Footer/>
-        </Typography>
+
+      <Box id="footer">
+        <Footer/>
       </Box>
     </Box>
   );
