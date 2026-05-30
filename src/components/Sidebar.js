@@ -165,7 +165,7 @@ function SidebarContent({ onClose }) {
         </Typography>
 
         <Typography sx={{ fontSize: '0.8rem', opacity: 0.6, mb: 3 }}>
-          Full Stack Developer
+          Software Engineer
         </Typography>
 
         {/* SOCIAL */}

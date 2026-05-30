@@ -66,7 +66,7 @@ const detailsRight = [
 
 const stats = [
     { value: '60+', label: 'Clients Served' },
-    { value: '40+', label: 'Projects Delivered' },
+    { value: '76', label: 'Projects Delivered' },
     { value: '06+', label: 'Years Experience' },
 ];
 

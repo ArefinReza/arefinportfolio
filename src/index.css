@@ -10,6 +10,8 @@
   --color-accent: #ffd700;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-glow: rgba(0, 242, 254, 0.15);
+      text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {

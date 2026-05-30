@@ -394,20 +394,7 @@ function Skills() {
             fontStyle: 'normal',
             fontDisplay: 'swap',
           },
-          '@keyframes skillSweep': {
-            '0%, 100%': {
-              transform: 'translate3d(-18%, 0, 0) rotate(18deg)',
-              opacity: 0.24,
-            },
-            '50%': {
-              transform: 'translate3d(12%, 0, 0) rotate(18deg)',
-              opacity: 0.48,
-            },
-          },
-          '@keyframes skillRotate': {
-            from: { transform: 'rotate(0deg)' },
-            to: { transform: 'rotate(360deg)' },
-          },
+
           '@media (prefers-reduced-motion: reduce)': {
             '.skillsSection *': {
               animation: 'none !important',
@@ -458,9 +445,9 @@ function Skills() {
             width: { xs: 280, md: 560 },
             height: '138%',
             background:
-              'linear-gradient(90deg, transparent, rgba(255,255,255,0.13), transparent)',
-            animation: { xs: 'none', md: 'skillSweep 14s ease-in-out infinite' },
-            willChange: 'transform, opacity',
+              'linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent)',
+            opacity: 0.22,
+            pointerEvents: 'none',
           }}
         />
 
@@ -474,8 +461,8 @@ function Skills() {
             borderRadius: '50%',
             border: '1px solid rgba(103,232,249,0.16)',
             opacity: 0.72,
-            animation: { xs: 'none', md: 'skillRotate 90s linear infinite' },
-            willChange: 'transform',
+            pointerEvents: 'none',
+
             '&::before': {
               content: '""',
               position: 'absolute',
@@ -483,6 +470,7 @@ function Skills() {
               borderRadius: '50%',
               border: '1px dashed rgba(255,209,102,0.16)',
             },
+
             '&::after': {
               content: '""',
               position: 'absolute',
