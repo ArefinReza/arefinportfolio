@@ -15,14 +15,15 @@ import WebIcon from '@mui/icons-material/Web';
 import SchoolIcon from '@mui/icons-material/School';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import WavesIcon from '@mui/icons-material/Waves';
 import RadarIcon from '@mui/icons-material/Radar';
 
 import profileImage from '../assets/image/profileImage.jpg';
 import '../assets/css/about.css';
+import { profileLinks } from './profileLinks';
 
 const detailsLeft = [
     { icon: <CakeIcon />, label: 'Birthday', value: 'December 23, 1998' },
@@ -30,36 +31,36 @@ const detailsLeft = [
         icon: <WebIcon />,
         label: 'Website',
         value: 'arefinreza.netlify.app',
-        href: 'https://arefinreza.netlify.app',
+        href: profileLinks.website,
     },
     {
         icon: <FacebookIcon />,
         label: 'Facebook',
         value: 'arefin.reza.saim',
-        href: 'https://www.facebook.com/arefin.reza.saim',
+        href: profileLinks.facebook,
     },
     {
-        icon: <InstagramIcon />,
-        label: 'Instagram',
-        value: '@arefinsaim',
-        href: 'https://www.instagram.com/arefinsaim/',
+        icon: <WhatsAppIcon />,
+        label: 'WhatsApp',
+        value: '01819222446',
+        href: profileLinks.whatsapp,
     },
 ];
 
 const detailsRight = [
     { icon: <PersonIcon />, label: 'Father', value: 'MD. Erfan Reza' },
-    { icon: <SchoolIcon />, label: 'Degree', value: 'Bachelor of Science' },
+    { icon: <SchoolIcon />, label: 'Degree', value: 'BSC in CES' },
     {
         icon: <LinkedInIcon />,
         label: 'LinkedIn',
         value: 'arefinreza46',
-        href: 'https://www.linkedin.com/in/arefinreza46/',
+        href: profileLinks.linkedin,
     },
     {
         icon: <GitHubIcon />,
         label: 'Github',
         value: 'ArefinReza',
-        href: 'https://github.com/ArefinReza',
+        href: profileLinks.github,
     },
 ];
 

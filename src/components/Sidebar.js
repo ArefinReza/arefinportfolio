@@ -21,14 +21,15 @@ import {
   ContactMail,
   CodeRounded,
   Facebook,
-  Twitter,
   LinkedIn,
   Instagram,
   GitHub,
+  WhatsApp,
 } from '@mui/icons-material';
 
 import { Link } from 'react-scroll';
 import profile from '../assets/image/profile.jpg';
+import { profileLinks } from './profileLinks';
 
 const navItems = [
   { label: 'Home', icon: <Home />, to: 'home' },
@@ -42,11 +43,11 @@ const navItems = [
 ];
 
 const socialItems = [
-  { icon: <Facebook />, href: 'https://facebook.com', color: '#7dd3fc' },
-  { icon: <Twitter />, href: '#', color: '#fbbf24' },
-  { icon: <LinkedIn />, href: '#', color: '#a78bfa' },
-  { icon: <Instagram />, href: '#', color: '#fb7185' },
-  { icon: <GitHub />, href: '#', color: '#86efac' },
+  { icon: <Facebook />, href: profileLinks.facebook, color: '#7dd3fc' },
+  { icon: <LinkedIn />, href: profileLinks.linkedin, color: '#a78bfa' },
+  { icon: <Instagram />, href: profileLinks.instagram, color: '#fb7185' },
+  { icon: <GitHub />, href: profileLinks.github, color: '#86efac' },
+  { icon: <WhatsApp />, href: profileLinks.whatsapp, color: '#4ade80' },
 ];
 
 /* ---------------- MOBILE HAMBURGER ---------------- */
@@ -173,6 +174,8 @@ function SidebarContent({ onClose }) {
             <IconButton
               key={i}
               href={s.href}
+              target="_blank"
+              rel="noreferrer"
               sx={{
                 width: 38,
                 height: 38,

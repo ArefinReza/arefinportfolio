@@ -11,9 +11,9 @@ import {
 
 import {
     Facebook,
-    Twitter,
     LinkedIn,
     Instagram,
+    WhatsApp,
     AutoAwesome,
     ArrowOutward,
     Email,
@@ -24,30 +24,32 @@ import {
     WorkOutline,
 } from '@mui/icons-material';
 
+import { profileLinks } from './profileLinks';
+
 const socialLinks = [
     {
         label: 'Facebook',
         icon: <Facebook />,
-        href: 'https://www.facebook.com/arefin.reza.saim',
+        href: profileLinks.facebook,
         color: '#67E8F9',
-    },
-    {
-        label: 'Twitter',
-        icon: <Twitter />,
-        href: 'https://twitter.com',
-        color: '#F5C86A',
     },
     {
         label: 'LinkedIn',
         icon: <LinkedIn />,
-        href: 'https://www.linkedin.com/in/arefinreza46/',
+        href: profileLinks.linkedin,
         color: '#A78BFA',
     },
     {
         label: 'Instagram',
         icon: <Instagram />,
-        href: 'https://www.instagram.com/arefinsaim/',
+        href: profileLinks.instagram,
         color: '#FB7185',
+    },
+    {
+        label: 'WhatsApp',
+        icon: <WhatsApp />,
+        href: profileLinks.whatsapp,
+        color: '#86EFAC',
     },
 ];
 
