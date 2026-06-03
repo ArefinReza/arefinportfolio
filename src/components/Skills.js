@@ -517,7 +517,7 @@ function Skills() {
               align="center"
               sx={{
                 color: '#fff',
-                fontSize: { xs: '3.35rem', sm: '5rem', md: '6.8rem' },
+                fontSize: { xs: '2.8rem', sm: '5rem', md: '6.8rem' },
                 lineHeight: 0.82,
                 letterSpacing: '-0.06em',
                 textTransform: 'uppercase',
@@ -530,7 +530,7 @@ function Skills() {
                 sx={{
                   display: 'block',
                   color: '#FFD166',
-                  fontSize: { xs: '2.4rem', sm: '3.35rem', md: '4.45rem' },
+                  fontSize: { xs: '2rem', sm: '3.35rem', md: '4.45rem' },
                   letterSpacing: '-0.04em',
                 }}
               >

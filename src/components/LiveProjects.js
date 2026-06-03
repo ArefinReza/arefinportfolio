@@ -169,7 +169,7 @@ const LiveProjects = () => {
             <Typography
               component="h2"
               sx={{
-                fontSize: { xs: '2.2rem', sm: '2.8rem', md: '3.5rem' },
+                fontSize: { xs: '1.8rem', sm: '2.8rem', md: '3.5rem' },
                 lineHeight: 1.05,
                 letterSpacing: '-0.02em',
                 color: '#F8FAFC',
@@ -271,7 +271,7 @@ const LiveProjects = () => {
                       borderRadius: '8px',
                       bgcolor: 'rgba(255,255,255,0.06)',
                       border: '1px solid rgba(255,255,255,0.08)',
-                      display: 'flex',
+                      display: { xs: 'none', sm: 'flex' },
                       alignItems: 'center',
                       gap: 1,
                       maxWidth: 480,

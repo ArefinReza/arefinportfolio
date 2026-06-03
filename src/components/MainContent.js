@@ -19,66 +19,66 @@ const MainContent = () => {
 
       {/* Home Section */}
       <Box id="home">
-        <Home/>
+        <Home />
       </Box>
 
       {/* About Section */}
       <Box id="about" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal-blur-in">
-          <About/>
+          <About />
         </ScrollReveal>
       </Box>
 
       {/* Skills Sections  */}
       <Box id="skills" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal-zoom-in">
-          <Skills/>
+          <Skills />
         </ScrollReveal>
       </Box>
 
       {/* Resume Section */}
       <Box id="resume" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal">
-          <Resume/>
+          <Resume />
         </ScrollReveal>
       </Box>
 
       {/* Portfolio Section */}
       <Box id="portfolio" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal">
-          <Portfolio/>
+          <Portfolio />
         </ScrollReveal>
       </Box>
 
       {/* Live Projects Section */}
       <Box id="live-projects" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal">
-          <LiveProjects/>
+          <LiveProjects />
         </ScrollReveal>
       </Box>
 
       {/* Services Section */}
       <Box id="services" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal-zoom-in">
-          <Services/>
+          <Services />
         </ScrollReveal>
       </Box>
 
       <Box id="reviews" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal">
-          <Reviews/>
+          <Reviews />
         </ScrollReveal>
       </Box>
 
       {/* Contact Section */}
       <Box id="contact" sx={{ my: 8 }}>
         <ScrollReveal variant="reveal-blur-in">
-          <Contact/>
+          <Contact />
         </ScrollReveal>
       </Box>
 
       <Box id="footer">
-        <Footer/>
+        <Footer />
       </Box>
     </Box>
   );

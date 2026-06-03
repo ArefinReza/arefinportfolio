@@ -552,7 +552,7 @@ function Resume() {
               align="center"
               sx={{
                 color: '#FFFFFF',
-                fontSize: { xs: '3.25rem', sm: '5rem', md: '7.15rem' },
+                fontSize: { xs: '2.8rem', sm: '5rem', md: '7.15rem' },
                 lineHeight: 0.84,
                 fontWeight: 950,
                 textTransform: 'uppercase',
@@ -571,7 +571,7 @@ function Resume() {
                     md: '1.5px #F5C86A',
                   },
                   textShadow: 'none',
-                  fontSize: { xs: '2.5rem', sm: '3.75rem', md: '4.95rem' },
+                  fontSize: { xs: '2rem', sm: '3.75rem', md: '4.95rem' },
                 }}
               >
                   Overview

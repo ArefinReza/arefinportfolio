@@ -29,7 +29,7 @@ const App = () => {
   const fallbackTitle = 'MD. Arefin Reza | Full-Stack Developer Portfolio';
   const title = titleByPath[path] || fallbackTitle;
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', width: '100%', minHeight: '100vh', overflowX: 'hidden' }}>
       <Seo
         title={title}
         description={description}
@@ -39,7 +39,7 @@ const App = () => {
       />
       <CssBaseline />
       {location.pathname === '/' && <Sidebar />}
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, minWidth: 0, width: '100%', overflowX: 'hidden' }}>
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/services/:id" element={<ServiceDetails />} />

@@ -269,8 +269,8 @@ const Home = () => {
                   sx={{
                     m: 0,
                     color: 'rgba(255,255,255,0.62)',
-                    fontSize: { xs: '0.82rem', md: '0.88rem' },
-                    letterSpacing: '0.32em',
+                    fontSize: { xs: '0.72rem', md: '0.88rem' },
+                    letterSpacing: { xs: '0.18em', md: '0.32em' },
                     textTransform: 'uppercase',
                     mb: 0.4,
                   }}
@@ -285,7 +285,7 @@ const Home = () => {
                   sx={{
                     m: 0,
                     fontSize: {
-                      xs: '3.2rem',
+                      xs: '2.6rem',
                       sm: '4.6rem',
                       md: '6.1rem',
                       lg: '6.75rem',
@@ -345,7 +345,7 @@ const Home = () => {
                   mb: 2.2,
                   color: '#F8FAFC',
                   fontSize: {
-                    xs: '2.15rem',
+                    xs: '1.75rem',
                     sm: '2.85rem',
                     md: '3.58rem',
                     lg: '3.98rem',

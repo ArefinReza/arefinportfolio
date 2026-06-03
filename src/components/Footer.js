@@ -220,7 +220,7 @@ const Footer = () => {
                                 <Typography
                                     sx={{
                                         color: '#fff',
-                                        fontSize: { xs: '3.05rem', sm: '4.7rem', md: '7rem' },
+                                        fontSize: { xs: '2.8rem', sm: '4.7rem', md: '7rem' },
                                         lineHeight: 0.78,
                                         fontWeight: 950,
                                         textTransform: 'uppercase',
@@ -239,7 +239,7 @@ const Footer = () => {
                                                 md: '1.6px #F5C86A',
                                             },
                                             textShadow: 'none',
-                                            fontSize: { xs: '2.25rem', sm: '3.5rem', md: '5.1rem' },
+                                            fontSize: { xs: '2rem', sm: '3.5rem', md: '5.1rem' },
                                         }}
                                     >
                                         Next Product

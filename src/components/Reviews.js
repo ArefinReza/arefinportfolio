@@ -116,7 +116,7 @@ const Reviews = () => {
               align="center"
               sx={{
                 color: "#FFFFFF",
-                fontSize: { xs: "3.05rem", sm: "4.5rem", md: "6.3rem" },
+                fontSize: { xs: "2.8rem", sm: "4.5rem", md: "6.3rem" },
                 lineHeight: 0.84,
                 fontWeight: 950,
                 textTransform: "uppercase",
@@ -135,7 +135,7 @@ const Reviews = () => {
                     md: "1.5px #F5C86A",
                   },
                   textShadow: "none",
-                  fontSize: { xs: "2.45rem", sm: "3.5rem", md: "4.7rem" },
+                  fontSize: { xs: "2rem", sm: "3.5rem", md: "4.7rem" },
                 }}
               >
                 Feedback

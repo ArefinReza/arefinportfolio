@@ -49,7 +49,7 @@ const detailsLeft = [
 
 const detailsRight = [
     { icon: <PersonIcon />, label: 'Father', value: 'MD. Erfan Reza' },
-    { icon: <SchoolIcon />, label: 'Degree', value: 'BSC in CES' },
+    { icon: <SchoolIcon />, label: 'Degree', value: 'BSC in CSE' },
     {
         icon: <LinkedInIcon />,
         label: 'LinkedIn',
@@ -274,7 +274,7 @@ function About() {
                             align="center"
                             sx={{
                                 color: '#fff',
-                                fontSize: { xs: '3.5rem', sm: '5rem', md: '6.4rem' },
+                                fontSize: { xs: '2.8rem', sm: '5rem', md: '6.4rem' },
                                 lineHeight: 0.82,
                                 letterSpacing: '-0.055em',
                                 textTransform: 'uppercase',
@@ -287,7 +287,7 @@ function About() {
                                 sx={{
                                     display: 'block',
                                     color: '#FFD166',
-                                    fontSize: { xs: '2.35rem', sm: '3.25rem', md: '4.2rem' },
+                                    fontSize: { xs: '2rem', sm: '3.25rem', md: '4.2rem' },
                                     letterSpacing: '-0.035em',
                                 }}
                             >
@@ -349,7 +349,7 @@ function About() {
                                     spacing={1}
                                     sx={{
                                         position: 'absolute',
-                                        right: -18,
+                                        right: { xs: 0, sm: -18 },
                                         bottom: 28,
                                         px: 1.5,
                                         py: 1,
