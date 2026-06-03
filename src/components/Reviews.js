@@ -9,7 +9,6 @@ import {
   GlobalStyles,
 } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 import { reviews } from "./Api";

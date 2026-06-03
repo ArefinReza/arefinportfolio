@@ -4,7 +4,6 @@ import {
   Grid,
   Typography,
   Box,
-  Paper,
   useMediaQuery,
   Stack,
   GlobalStyles,
@@ -15,7 +14,6 @@ import { Home as HomeIcon } from '@mui/icons-material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Carousel from 'react-material-ui-carousel';
 import { motion } from 'framer-motion';
 import { services } from './Api';
