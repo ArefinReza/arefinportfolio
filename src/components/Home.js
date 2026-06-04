@@ -25,7 +25,7 @@ import { Link } from 'react-scroll';
 const skills = ['React', 'Vue', 'Laravel', 'Node.js', 'REST APIs', 'Full Stack'];
 
 const metrics = [
-  { value: '40+', label: 'Projects' },
+  { value: '76+', label: 'Projects' },
   { value: '06+', label: 'Years' },
   { value: '99%', label: 'Client Satisfaction' },
 ];
