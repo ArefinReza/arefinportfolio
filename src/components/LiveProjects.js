@@ -34,6 +34,12 @@ const liveProjects = [
     description: 'Production Furniture e-commerce platform with Fresh Frontend and optimized performance.',
     tags: ['Furniture E-Commerce', 'Live'],
   },
+  {
+    name: 'Trust Retouch',
+    url: 'https://trustretouch.com/',
+    description: 'Outsource premium photo editing services and clipping paths. Expert ecommerce product photo editing and professional retouching with fast turnaround.',
+    tags: ['Service', 'Outsource', 'Portfolio', 'Live'],
+  },
 ];
 
 const fadeUp = {
